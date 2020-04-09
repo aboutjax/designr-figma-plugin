@@ -1,16 +1,51 @@
-# Webpack 
+## Wahoo Color Helper
 
-<img src="../_screenshots/webpack.png" width="400" />
+![image](https://i.imgur.com/UqpgaOk.png)
 
-Creates rectangles. Demonstrates bundling plugin code using Webpack.
+This is a figma plugin that helps us achieve better color consistency while we design.
 
-The main plugin code is in `src/code.ts`. The HTML for the UI is in
-`src/ui.html`, while the embedded JavaScript is in `src/ui.ts`.
+## Installation
+1. [Download](https://github.com/aboutjax/Wahoo-Helper/archive/master.zip) and unzip.
+2. Right click anywhere in Figma canvas → Plugins → Manage Plugins
+3. At the right side of the screen, tap "+ Create your own plugin" .
+4. Tap "Link existing plugin" and choose the `manifest.json` file inside the folder you just unzipped.
+5. Open the plugin by:
+   - right clicking anywhere on canvas → Plugins → Development → Wahoo Helper.
+   - `cmd + /` to open Figma menu and search "helper".
 
-These are compiled to files in `dist/`, which are what Figma will use to run
-your plugin.
 
-To build:
+## Check Stray Colors
+
+**What?**
+
+Checks all the colours in the selected frame that aren't using the intended functional colors defined from our design library.
+
+**Why?**
+
+Because sometimes it's okay hastely mock something up with the color picker (we're all guity of this, don't lie). But this tool should help us clean up this mess afterwards.
+
+**When?**
+
+- Before handing off to developers.
+- Before converting the frame to dark / light themes.
+
+
+
+## Convert to Dark / Light Theme
+
+**What?**
+
+One click operation to convert the entire frame to Dark / Light theme function colours
+
+**Why?**
+
+Because doing it one by one under the native Figma "Selection Color" is laborious.
+
+**When?**
+
+Anytime, no restrictions.
+
+To run locally:
 
     $ npm install
     $ npx webpack
