@@ -1,11 +1,11 @@
-## Wahoo Color Helper
+## DESIGNR Figma Plugin
 
 ![image](https://i.imgur.com/UqpgaOk.png)
 
 This is a figma plugin that helps us achieve better color consistency while we design.
 
 ## Installation
-1. [Download](https://github.com/aboutjax/Wahoo-Helper/archive/master.zip) and unzip.
+1. [Download](https://github.com/aboutjax/designr-figma-plugin/archive/master.zip) and unzip.
 2. Right click anywhere in Figma canvas → Plugins → Manage Plugins
 3. At the right side of the screen, tap "+ Create your own plugin" .
 4. Tap "Link existing plugin" and choose the `manifest.json` file inside the folder you just unzipped.
