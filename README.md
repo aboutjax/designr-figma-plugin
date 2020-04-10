@@ -21,7 +21,7 @@ Checks all the colours in the selected frame that aren't using the intended func
 
 **Why?**
 
-Because sometimes it's okay hastely mock something up with the color picker (we're all guity of this, don't lie). But this tool should help us clean up this mess afterwards.
+Because it's okay to design quickly with the color picker (we're all guity of this, don't lie). But this tool should help us clean up the mess afterwards.
 
 **When?**
 
