@@ -28,10 +28,10 @@ function isEquivalent(a, b) {
   // are considered equivalent
   return true;
 }
-let strayFill = 0;
-let strayStroke = 0;
 
 const ColorCheckTraverse = (node) => {
+  let strayFill = 0;
+  let strayStroke = 0;
   if ("fills" && "strokes" in node) {
     // Filter warning stroke function
     let filterWarningStroke = function (stroke) {
@@ -103,8 +103,6 @@ const ColorCheckTraverse = (node) => {
     } else {
       console.log("no stroke");
     }
-
-    // asdf
   } else {
     console.log("No fill & stroke property");
   }
@@ -115,6 +113,18 @@ const ColorCheckTraverse = (node) => {
     }
   } else {
     // do nothing
+  }
+
+  if (strayFill > 0 || strayStroke > 0) {
+    let errorString =
+      "You have " +
+      strayFill +
+      " fills and " +
+      strayStroke +
+      " strokes not using colours from our library!";
+    figma.notify(errorString, { timeout: 0.5 });
+  } else {
+    figma.notify("👏 All is good in the hood!", { timeout: 0.5 });
   }
 };
 

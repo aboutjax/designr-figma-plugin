@@ -146,10 +146,10 @@ const App = () => {
         <div className="button-group">
           <div className="flex">
             <button className="button" id="dark-theme" onClick={onDarkTheme}>
-              Dark Theme
+              Dark
             </button>
             <button className="button" id="light-theme" onClick={onLightTheme}>
-              Light Theme
+              Light
             </button>
           </div>
         </div>

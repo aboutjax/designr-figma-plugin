@@ -495,8 +495,13 @@ button {
 }
 
 .section {
-  padding: 24px 16px;
+  padding: 16px 16px;
   border-bottom: 1px solid lightgray;
+}
+
+.section .section {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .section:last-of-type {
