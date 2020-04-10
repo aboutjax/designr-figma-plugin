@@ -47,5 +47,5 @@ Adjust auto layout spacings with spacing defined from our tokens. Visible when y
 
 To run locally:
 
-   $ npm install
-   $ npx webpack
+      $ npm install
+      $ npx webpack
