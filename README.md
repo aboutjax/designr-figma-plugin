@@ -8,7 +8,7 @@ This is a figma plugin that helps us achieve better color consistency while we d
 1. [Download](https://github.com/aboutjax/designr-figma-plugin/archive/master.zip) and unzip.
 2. Right click anywhere in Figma canvas → Plugins → Manage Plugins
 3. At the right side of the screen, tap "+ Create your own plugin".
-4. Tap "Link existing plugin" and choose the `manifest.json` file inside the folder you just unzipped.
+4. Tap "Link existing plugin" and choose the `manifest.json` file inside the folder you unzipped.
 5. Open the plugin by:
    - right clicking anywhere on canvas → Plugins → Development → Wahoo Helper.
    - `cmd + /` to open Figma menu and search "helper".
@@ -43,7 +43,7 @@ Because doing it one by one under the native Figma "Selection Color" is laboriou
 Anytime, no restrictions.
 
 ## Auto Layout Spacings
-Adjust auto layout spacings with spacing defined from our tokens. Only visible when a Frame with Auto Layout enabled is selected.
+Adjust auto layout spacings with spacing defined from our tokens. Visible when you have a Frame with Auto Layout enabled selected.
 
 To run locally:
 
