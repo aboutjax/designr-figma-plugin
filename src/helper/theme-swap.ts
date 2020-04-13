@@ -5,10 +5,15 @@ const LightThemeTraverse = async (node) => {
   let darkUIBody = await ColorStyleId.darkUI.body;
   let darkUISurface = await ColorStyleId.darkUI.surface;
   let darkUIKeyline = await ColorStyleId.darkUI.keyline;
-  let darkUIKeylineAlternative = await ColorStyleId.darkUI.keylineAlternative;
+  let darkUIKeylineSupplementary = await ColorStyleId.darkUI
+    .keylineSupplementary;
   let darkUIAccent = await ColorStyleId.darkUI.accent;
-  let darkUIError = await ColorStyleId.darkUI.error;
+  let darkUIAccentHover = await ColorStyleId.darkUI.accentHover;
+  let darkUIDanger = await ColorStyleId.darkUI.danger;
+  let darkUISuccess = await ColorStyleId.darkUI.success;
   let darkUIOnAccent = await ColorStyleId.darkUI.onAccent;
+  let darkUIOnDanger = await ColorStyleId.darkUI.onDanger;
+  let darkUIOnSuccess = await ColorStyleId.darkUI.onSuccess;
   let darkUIOnSurfaceHigh = await ColorStyleId.darkUI.onSurfaceHigh;
   let darkUIOnSurfaceMedium = await ColorStyleId.darkUI.onSurfaceMedium;
   let darkUIOnSurfaceDisabled = await ColorStyleId.darkUI.onSurfaceDisabled;
@@ -29,8 +34,8 @@ const LightThemeTraverse = async (node) => {
         node.strokeStyleId = resp.id;
       });
       break;
-    case darkUIError.id:
-      ColorStyleId.lightUI.error.then((resp) => {
+    case darkUIDanger.id:
+      ColorStyleId.lightUI.danger.then((resp) => {
         node.strokeStyleId = resp.id;
       });
       break;
@@ -39,8 +44,8 @@ const LightThemeTraverse = async (node) => {
         node.strokeStyleId = resp.id;
       });
       break;
-    case darkUIKeylineAlternative.id:
-      ColorStyleId.lightUI.keylineAlternative.then((resp) => {
+    case darkUIKeylineSupplementary.id:
+      ColorStyleId.lightUI.keylineSupplementary.then((resp) => {
         node.strokeStyleId = resp.id;
       });
       break;
@@ -68,8 +73,8 @@ const LightThemeTraverse = async (node) => {
         node.fillStyleId = resp.id;
       });
       break;
-    case darkUIKeylineAlternative.id:
-      ColorStyleId.lightUI.keylineAlternative.then((resp) => {
+    case darkUIKeylineSupplementary.id:
+      ColorStyleId.lightUI.keylineSupplementary.then((resp) => {
         node.fillStyleId = resp.id;
       });
       break;
@@ -78,13 +83,33 @@ const LightThemeTraverse = async (node) => {
         node.fillStyleId = resp.id;
       });
       break;
-    case darkUIError.id:
-      ColorStyleId.lightUI.error.then((resp) => {
+    case darkUIAccentHover.id:
+      ColorStyleId.lightUI.accentHover.then((resp) => {
+        node.fillStyleId = resp.id;
+      });
+      break;
+    case darkUIDanger.id:
+      ColorStyleId.lightUI.danger.then((resp) => {
+        node.fillStyleId = resp.id;
+      });
+      break;
+    case darkUISuccess.id:
+      ColorStyleId.lightUI.success.then((resp) => {
         node.fillStyleId = resp.id;
       });
       break;
     case darkUIOnAccent.id:
       ColorStyleId.lightUI.onAccent.then((resp) => {
+        node.fillStyleId = resp.id;
+      });
+      break;
+    case darkUIOnDanger.id:
+      ColorStyleId.lightUI.onDanger.then((resp) => {
+        node.fillStyleId = resp.id;
+      });
+      break;
+    case darkUIOnSuccess.id:
+      ColorStyleId.lightUI.onSuccess.then((resp) => {
         node.fillStyleId = resp.id;
       });
       break;
@@ -163,10 +188,15 @@ const DarkThemeTraverse = async (node) => {
   let lightUIBody = await ColorStyleId.lightUI.body;
   let lightUISurface = await ColorStyleId.lightUI.surface;
   let lightUIKeyline = await ColorStyleId.lightUI.keyline;
-  let lightUIKeylineAlternative = await ColorStyleId.lightUI.keylineAlternative;
+  let lightUIKeylineSupplementary = await ColorStyleId.lightUI
+    .keylineSupplementary;
   let lightUIAccent = await ColorStyleId.lightUI.accent;
-  let lightUIError = await ColorStyleId.lightUI.error;
+  let lightUIAccentHover = await ColorStyleId.lightUI.accentHover;
+  let lightUIDanger = await ColorStyleId.lightUI.danger;
+  let lightUISuccess = await ColorStyleId.lightUI.success;
   let lightUIOnAccent = await ColorStyleId.lightUI.onAccent;
+  let lightUIOnDanger = await ColorStyleId.lightUI.onDanger;
+  let lightUIOnSuccess = await ColorStyleId.lightUI.onSuccess;
   let lightUIOnSurfaceHigh = await ColorStyleId.lightUI.onSurfaceHigh;
   let lightUIOnSurfaceMedium = await ColorStyleId.lightUI.onSurfaceMedium;
   let lightUIOnSurfaceDisabled = await ColorStyleId.lightUI.onSurfaceDisabled;
@@ -186,8 +216,8 @@ const DarkThemeTraverse = async (node) => {
         node.strokeStyleId = resp.id;
       });
       break;
-    case lightUIError.id:
-      ColorStyleId.darkUI.error.then((resp) => {
+    case lightUIDanger.id:
+      ColorStyleId.darkUI.danger.then((resp) => {
         node.strokeStyleId = resp.id;
       });
       break;
@@ -196,8 +226,8 @@ const DarkThemeTraverse = async (node) => {
         node.strokeStyleId = resp.id;
       });
       break;
-    case lightUIKeylineAlternative.id:
-      ColorStyleId.darkUI.keylineAlternative.then((resp) => {
+    case lightUIKeylineSupplementary.id:
+      ColorStyleId.darkUI.keylineSupplementary.then((resp) => {
         node.strokeStyleId = resp.id;
       });
       break;
@@ -226,8 +256,8 @@ const DarkThemeTraverse = async (node) => {
       });
       break;
 
-    case lightUIKeylineAlternative.id:
-      ColorStyleId.darkUI.keylineAlternative.then((resp) => {
+    case lightUIKeylineSupplementary.id:
+      ColorStyleId.darkUI.keylineSupplementary.then((resp) => {
         node.fillStyleId = resp.id;
       });
       break;
@@ -236,13 +266,33 @@ const DarkThemeTraverse = async (node) => {
         node.fillStyleId = resp.id;
       });
       break;
-    case lightUIError.id:
-      ColorStyleId.darkUI.error.then((resp) => {
+    case lightUIAccentHover.id:
+      ColorStyleId.darkUI.accentHover.then((resp) => {
+        node.fillStyleId = resp.id;
+      });
+      break;
+    case lightUIDanger.id:
+      ColorStyleId.darkUI.danger.then((resp) => {
+        node.fillStyleId = resp.id;
+      });
+      break;
+    case lightUISuccess.id:
+      ColorStyleId.darkUI.success.then((resp) => {
         node.fillStyleId = resp.id;
       });
       break;
     case lightUIOnAccent.id:
       ColorStyleId.darkUI.onAccent.then((resp) => {
+        node.fillStyleId = resp.id;
+      });
+      break;
+    case lightUIOnDanger.id:
+      ColorStyleId.darkUI.onDanger.then((resp) => {
+        node.fillStyleId = resp.id;
+      });
+      break;
+    case lightUIOnSuccess.id:
+      ColorStyleId.darkUI.onSuccess.then((resp) => {
         node.fillStyleId = resp.id;
       });
       break;
