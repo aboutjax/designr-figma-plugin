@@ -10,8 +10,8 @@ This is a figma plugin that helps us achieve consistent color & spacing for Waho
 2. Right click anywhere in Figma canvas → Plugins → Manage Plugins
 3. At the right side of the screen, tap "+ Create your own plugin".
 4. Tap "Link existing plugin" and choose the `manifest.json` file inside the folder you unzipped.
-5. Open the plugin by:
-   - right clicking anywhere on canvas → Plugins → Development → Wahoo Helper.
+5. Open the plugin by these two methods:
+   - right clicking anywhere on canvas → Plugins → Development → Designr Helper.
    - `cmd + /` to open Figma menu and search "helper".
 
 # 🚀 Features
