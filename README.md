@@ -7,10 +7,11 @@ This is a figma plugin that helps us achieve consistent color & spacing for Waho
 # 🎁 Installation
 
 1. Go to [latest release](https://github.com/aboutjax/designr-figma-plugin/releases/latest) and download the source code.
-2. Right click anywhere in Figma canvas → Plugins → Manage Plugins
-3. At the right side of the screen, tap "+ Create your own plugin".
-4. Tap "Link existing plugin" and choose the `manifest.json` file inside the folder you unzipped.
-5. Open the plugin by these two methods:
+2. Unzip the `designr-figma-plugin.zip` file and place the unzipped folder in a safe directory anywhere on your machine.
+3. Right click anywhere in Figma canvas → Plugins → Manage Plugins
+4. At the right side of the screen, tap "+ Create your own plugin".
+5. Tap "Link existing plugin" and choose the `manifest.json` file inside the folder you unzipped.
+6. Open the plugin by these two methods:
    - right clicking anywhere on canvas → Plugins → Development → Designr Helper.
    - `cmd + /` to open Figma menu and search "helper".
 
