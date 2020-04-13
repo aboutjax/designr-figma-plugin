@@ -42,6 +42,8 @@ Adjust auto layout spacings with spacing defined from our tokens. Visible when y
 
 **Why?** Gets us thinking in sizes (ie. S, M, L ) instead of pixel values (ie. 16px, 24px, 32px)
 
+**Note** There’s a weird Figma glitch: After you change a slider value, your cursor needs to go back to Figma canvas to update the frame to the most up to date value. Not sure why, it’s a weird Figma plugin issue I couldn’t fix.
+
 # 💬 To Contribute
 
 If you want to contribute, run this plugin locally on your machine and watch for code changes.
