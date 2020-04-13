@@ -1,34 +1,34 @@
 const ColorStyleId = {
   lightUI: {
     body: figma.importStyleByKeyAsync(
-      "fb8c4bd281795afa9dc89334a4e51d8074377875"
+      "23e94fceed9accbda4db9c672c43d21b4d286e4c"
     ),
     surface: figma.importStyleByKeyAsync(
-      "a92dc99c84ddd59822f873e0a69539a4a3ff1387"
+      "903e5bf274139eeb9f4968a9ef08ec05eaf0b274"
     ),
     keyline: figma.importStyleByKeyAsync(
-      "035e2f818df36b0e4f75ff6c529d54b3ca7082cc"
+      "ee4ddce2e56ad47c4216d5827a283b943a794c78"
     ),
     keylineAlternative: figma.importStyleByKeyAsync(
-      "139c3c1e0c69fc9583292b787af895d0148a9939"
+      "4c23ec3401af47c4044b9157cc65549dabd207d9"
     ),
     accent: figma.importStyleByKeyAsync(
-      "38935c8773bab5e7b2c9db832b2bcc84b075b24c"
+      "cf0c8e88eb65b8049feca60ac83e1de3d3ab6e8b"
     ),
     error: figma.importStyleByKeyAsync(
-      "4096eb67f6718f300119597d8fd6c82d47936ea0"
+      "798cb8f898ab2a508a7ba491d899011fda896577"
     ),
     onAccent: figma.importStyleByKeyAsync(
-      "a4ced9ccbdeb78146fa1b7d24fff6b7384c84784"
+      "5de7892ca442a33bfa46252bd38be6cbf54ab43c"
     ),
     onSurfaceHigh: figma.importStyleByKeyAsync(
-      "346e73b97981c4166f24c3c3b0008fc2a18ad662"
+      "8f05c63de7f100b2bd8fad7b8bd71489b637c067"
     ),
     onSurfaceMedium: figma.importStyleByKeyAsync(
-      "3774208f54aa6405db7c1b7d936a17525f5b1a77"
+      "97063a5f62c354e6ae0919d50b68d0badb4a122e"
     ),
     onSurfaceDisabled: figma.importStyleByKeyAsync(
-      "bc1e389de2ce73a54f8a692f489650ef52667f30"
+      "a809f75e14fbe6296272e8531106f6cc4c692553"
     ),
   },
   darkUI: {
