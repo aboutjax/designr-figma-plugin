@@ -63,8 +63,15 @@ const ColorCheckTraverse = (node) => {
             // node.strokeAlign = "OUTSIDE";
         };
         // Check Fill
+        const hasImage = (fill) => fill.type === "IMAGE";
         if (node.fills.length > 0) {
-            if (node.fillStyleId.length > 0) {
+            // if (node.fills.some(hasImage)) {
+            //   console.log("fill is image");
+            // } else {
+            //   console.log("fill is NOT image");
+            //   // nothing
+            // }
+            if (node.fillStyleId.length > 0 || node.fills.some(hasImage)) {
                 console.log("✅ Good fill");
             }
             else {

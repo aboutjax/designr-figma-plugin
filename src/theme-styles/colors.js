@@ -9,9 +9,6 @@ const ColorStyleId = {
     keyline: figma.importStyleByKeyAsync(
       "ee4ddce2e56ad47c4216d5827a283b943a794c78"
     ),
-    keylineSupplementary: figma.importStyleByKeyAsync(
-      "4c23ec3401af47c4044b9157cc65549dabd207d9"
-    ),
     accent: figma.importStyleByKeyAsync(
       "cf0c8e88eb65b8049feca60ac83e1de3d3ab6e8b"
     ),
@@ -52,9 +49,6 @@ const ColorStyleId = {
     ),
     keyline: figma.importStyleByKeyAsync(
       "84ab0f298ea8fcd0b82ac89298ad51140ca7b75a"
-    ),
-    keylineSupplementary: figma.importStyleByKeyAsync(
-      "bffe20f9729acb525d8861288f0d844137698c55"
     ),
     accent: figma.importStyleByKeyAsync(
       "1b038ec600d2a14b6cce35f7b4090c6ad2dd2c7d"
