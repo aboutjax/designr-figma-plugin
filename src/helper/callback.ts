@@ -16,7 +16,7 @@ const onSelectionChange = (node) => {
     figma.ui.postMessage(obj);
   } else {
     // console.log("no");
-    figma.ui.postMessage("nothing selected");
+    // figma.ui.postMessage("nothing selected");
   }
 };
 

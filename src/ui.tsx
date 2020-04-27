@@ -155,7 +155,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className="section">
+      {/* <div className="section">
         <h4>Enable Auto Layout</h4>
         <p>Force Auto Layout on selected frames.</p>
         <div className="button-group">
@@ -190,7 +190,7 @@ const App = () => {
         />
       ) : (
         ""
-      )}
+      )} */}
     </div>
   );
 };
