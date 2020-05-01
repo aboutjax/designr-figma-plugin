@@ -1,119 +1,60 @@
 import { DarkUiColors, LightUiColors } from "../theme-styles/colors";
 import { DarkUiEffects, LightUiEffects } from "../theme-styles/effects";
 
-// Light Mode
-const LightThemeTraverse = async (node) => {
-  // do nothing below
-  if ("children" in node) {
-    for (const child of node.children) {
-      LightThemeTraverse(child);
-    }
-  } else {
-    // do nothing
-  }
+// Fill
+const swapFill = async (node) => {
+  let nodeFillStyleId = node.fillStyleId;
+  let nodeFillPaintStyle = figma.getStyleById(nodeFillStyleId);
+  let nodeFillPaintName = nodeFillPaintStyle.name;
+  let swappedNodeFillName = null;
+  let nodeFillPaintIsLightMode = nodeFillPaintName.includes("light ui");
 
-  function replaceNodeWithLightPalette(val) {
-    // Fills
-    let nodeFillStyleId = val.fillStyleId;
-    let nodeFillPaintStyle = figma.getStyleById(nodeFillStyleId);
-    let nodeFillName = nodeFillPaintStyle.name;
-    let lightNodeFillName = nodeFillName.replace("dark ui / ", "light ui / ");
+  if (nodeFillPaintIsLightMode) {
+    swappedNodeFillName = nodeFillPaintName.replace(
+      "light ui / ",
+      "dark ui / "
+    );
 
-    for (const item of LightUiColors) {
-      if (item.name === lightNodeFillName) {
+    for (const item of DarkUiColors) {
+      if (item.name === swappedNodeFillName) {
         figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
           node.fillStyleId = resp.id;
         });
-      } else {
-        // Do nothing
       }
     }
-
-    // Strokes
-    let nodeStrokeStyleId = val.strokeStyleId;
-    let nodeStrokePaintStyle = figma.getStyleById(nodeStrokeStyleId);
-    let nodeStrokeName = nodeStrokePaintStyle.name;
-    let lightNodeStrokeName = nodeStrokeName.replace(
+  } else {
+    swappedNodeFillName = nodeFillPaintName.replace(
       "dark ui / ",
       "light ui / "
     );
 
     for (const item of LightUiColors) {
-      if (item.name === lightNodeStrokeName) {
+      if (item.name === swappedNodeFillName) {
         figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
-          node.strokeStyleId = resp.id;
+          node.fillStyleId = resp.id;
         });
-      } else {
-        // Do nothing
-      }
-    }
-
-    // Effects
-    let nodeEffectStyleId = val.effectStyleId;
-    console.log(nodeEffectStyleId);
-
-    let nodeEffectStyle = figma.getStyleById(nodeEffectStyleId);
-    let nodeEffectName = nodeEffectStyle.name;
-    let lightNodeEffectName = nodeEffectName.replace(
-      "dark ui / ",
-      "light ui / "
-    );
-
-    for (const item of LightUiEffects) {
-      if (item.name === lightNodeEffectName) {
-        figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
-          node.effectStyleId = resp.id;
-        });
-      } else {
-        // Do nothing
       }
     }
   }
-  // Replace nodes
-  replaceNodeWithLightPalette(node);
 };
 
-// Dark Mode
-const DarkThemeTraverse = async (node) => {
-  // GetAllLocalEffectStyles();
-  // GetAllLocalPaintStyles()
-  // do nothing below
-  if ("children" in node) {
-    for (const child of node.children) {
-      DarkThemeTraverse(child);
-    }
-  } else {
-    // do nothing
-  }
-  
-  function replaceNodeWithDarkPalette(val) {
-    // Fills
-    let nodeFillStyleId = val.fillStyleId;
-    let nodeFillPaintStyle = figma.getStyleById(nodeFillStyleId);
-    let nodeFillName = nodeFillPaintStyle.name;
-    let darkNodeFillName = nodeFillName.replace("light ui / ", "dark ui / ");
+// Strokes
+const swapStroke = async (node) => {
+  let nodeStrokeStyleId = node.strokeStyleId;
+  let nodeStrokePaintStyle = figma.getStyleById(nodeStrokeStyleId);
+  let nodeStrokePaintName = nodeStrokePaintStyle.name;
+  let swappedNodeStrokeName = null;
+  let nodeStrokePaintIsLightMode = nodeStrokePaintName.includes("light ui");
 
-    for (const item of DarkUiColors) {
-      if (item.name === darkNodeFillName) {
-        figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
-          node.fillStyleId = resp.id;
-        });
-      } else {
-        // Do nothing
-      }
-    }
+  console.log("Stroke: " + nodeStrokePaintName);
 
-    // Strokes
-    let nodeStrokeStyleId = val.strokeStyleId;
-    let nodeStrokePaintStyle = figma.getStyleById(nodeStrokeStyleId);
-    let nodeStrokeName = nodeStrokePaintStyle.name;
-    let darkNodeStrokeName = nodeStrokeName.replace(
+  if (nodeStrokePaintIsLightMode) {
+    swappedNodeStrokeName = nodeStrokePaintName.replace(
       "light ui / ",
       "dark ui / "
     );
-
     for (const item of DarkUiColors) {
-      if (item.name === darkNodeStrokeName) {
+      if (item.name === swappedNodeStrokeName) {
         figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
           node.strokeStyleId = resp.id;
         });
@@ -121,20 +62,53 @@ const DarkThemeTraverse = async (node) => {
         // Do nothing
       }
     }
+  } else {
+    swappedNodeStrokeName = nodeStrokePaintName.replace(
+      "dark ui / ",
+      "light ui / "
+    );
+    for (const item of LightUiColors) {
+      if (item.name === swappedNodeStrokeName) {
+        figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
+          node.strokeStyleId = resp.id;
+        });
+      } else {
+        // Do nothing
+      }
+    }
+  }
+};
 
-    // Effects
-    let nodeEffectStyleId = val.effectStyleId;
-    console.log(nodeEffectStyleId);
+// Effects
+const swapEffects = async (node) => {
+  let nodeEffectStyleId = node.effectStyleId;
+  let nodeEffectStyle = figma.getStyleById(nodeEffectStyleId);
+  let nodeEffectStyleName = nodeEffectStyle.name;
+  let swappedNodeEffectName = null;
+  let nodeEffectStyleNameIsLight = nodeEffectStyleName.includes("light ui");
+  console.log("Effect: " + nodeEffectStyleName);
 
-    let nodeEffectStyle = figma.getStyleById(nodeEffectStyleId);
-    let nodeEffectName = nodeEffectStyle.name;
-    let DarkNodeEffectName = nodeEffectName.replace(
+  if (nodeEffectStyleNameIsLight) {
+    swappedNodeEffectName = nodeEffectStyleName.replace(
       "light ui / ",
       "dark ui / "
     );
-
     for (const item of DarkUiEffects) {
-      if (item.name === DarkNodeEffectName) {
+      if (item.name === swappedNodeEffectName) {
+        figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
+          node.effectStyleId = resp.id;
+        });
+      } else {
+        // do nothing
+      }
+    }
+  } else {
+    swappedNodeEffectName = nodeEffectStyleName.replace(
+      "dark ui / ",
+      "light ui / "
+    );
+    for (const item of LightUiEffects) {
+      if (item.name === swappedNodeEffectName) {
         figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
           node.effectStyleId = resp.id;
         });
@@ -143,49 +117,58 @@ const DarkThemeTraverse = async (node) => {
       }
     }
   }
-  // Replace nodes
-  replaceNodeWithDarkPalette(node);
 };
 
-export { LightThemeTraverse, DarkThemeTraverse };
+// Theme Swap
+const ThemeSwap = async (node) => {
+  // do nothing below
+  if ("children" in node) {
+    for (const child of node.children) {
+      ThemeSwap(child);
+    }
+  } else {
+    // do nothing
+  }
+  swapFill(node);
+  swapStroke(node);
+  swapEffects(node);
+};
+
+export { ThemeSwap };
 
 // Run this in tokens file
 const GetAllLocalPaintStyles = () => {
   function clone(val) {
-    return JSON.parse(JSON.stringify(val))
+    return JSON.parse(JSON.stringify(val));
   }
   let allPaintStyles = figma.getLocalPaintStyles();
   // console.log(allPaintStyles);
   let allStylesArray = [];
   for (const paintStyle of allPaintStyles) {
-    
-    let color = clone(paintStyle.paints[0])
+    let color = clone(paintStyle.paints[0]);
     // console.log(color);
-    
-    let colorRGB = color.color
-    
-    
-    let rgbToInt = (value) => { return Math.ceil(value * 255) }
-    
+
+    let colorRGB = color.color;
+
+    let rgbToInt = (value) => {
+      return Math.ceil(value * 255);
+    };
+
     let rgba = {
       r: rgbToInt(colorRGB.r),
       g: rgbToInt(colorRGB.g),
       b: rgbToInt(colorRGB.b),
-      a: color.opacity
-    }
-    
+      a: color.opacity,
+    };
 
-    
-    allStylesArray.push({ name: paintStyle.name, styleKey: paintStyle.key, rgba: rgba });
+    allStylesArray.push({
+      name: paintStyle.name,
+      styleKey: paintStyle.key,
+      rgba: rgba,
+    });
 
     console.log(allStylesArray);
-    
-
-    
-    
-
   }
-  // console.log(allStylesArray);
 };
 
 // Run this in tokens file

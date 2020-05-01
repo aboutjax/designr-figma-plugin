@@ -38,31 +38,31 @@ const PaddingHorizontalSlider = (nodes, msg) => {
 
     case "1":
       spacing = 4;
-      spacingName = "xxs";
+      spacingName = "1";
       break;
     case "2":
       spacing = 8;
-      spacingName = "xs";
+      spacingName = "2";
       break;
     case "3":
       spacing = 16;
-      spacingName = "s";
+      spacingName = "3";
       break;
     case "4":
       spacing = 24;
-      spacingName = "m";
+      spacingName = "4";
       break;
     case "5":
       spacing = 32;
-      spacingName = "l";
+      spacingName = "5";
       break;
     case "6":
       spacing = 40;
-      spacingName = "xl";
+      spacingName = "6";
       break;
     case "7":
       spacing = 48;
-      spacingName = "xxl";
+      spacingName = "7";
       break;
   }
 
@@ -100,31 +100,31 @@ const PaddingVerticalSlider = (nodes, msg) => {
 
     case "1":
       spacing = 4;
-      spacingName = "xxs";
+      spacingName = "1";
       break;
     case "2":
       spacing = 8;
-      spacingName = "xs";
+      spacingName = "2";
       break;
     case "3":
       spacing = 16;
-      spacingName = "s";
+      spacingName = "3";
       break;
     case "4":
       spacing = 24;
-      spacingName = "m";
+      spacingName = "4";
       break;
     case "5":
       spacing = 32;
-      spacingName = "l";
+      spacingName = "5";
       break;
     case "6":
       spacing = 40;
-      spacingName = "xl";
+      spacingName = "6";
       break;
     case "7":
       spacing = 48;
-      spacingName = "xxl";
+      spacingName = "7";
       break;
   }
 
@@ -157,31 +157,31 @@ const ItemSpacing = (nodes, msg) => {
 
     case "1":
       spacing = 4;
-      spacingName = "xxs";
+      spacingName = "1";
       break;
     case "2":
       spacing = 8;
-      spacingName = "xs";
+      spacingName = "2";
       break;
     case "3":
       spacing = 16;
-      spacingName = "s";
+      spacingName = "3";
       break;
     case "4":
       spacing = 24;
-      spacingName = "m";
+      spacingName = "4";
       break;
     case "5":
       spacing = 32;
-      spacingName = "l";
+      spacingName = "5";
       break;
     case "6":
       spacing = 40;
-      spacingName = "xl";
+      spacingName = "6";
       break;
     case "7":
       spacing = 48;
-      spacingName = "xxl";
+      spacingName = "7";
       break;
   }
 

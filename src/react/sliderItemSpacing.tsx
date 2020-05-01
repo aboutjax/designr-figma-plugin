@@ -6,13 +6,13 @@ const SliderItemSpacing = (props) => (
       htmlFor="padding-horizontal-slider"
     >
       <span className="label">0</span>
-      <span className="label">xxs</span>
-      <span className="label">xs</span>
-      <span className="label">s</span>
-      <span className="label">m</span>
-      <span className="label">l</span>
-      <span className="label">xl</span>
-      <span className="label">xxl</span>
+      <span className="label">1</span>
+      <span className="label">2</span>
+      <span className="label">3</span>
+      <span className="label">4</span>
+      <span className="label">5</span>
+      <span className="label">6</span>
+      <span className="label">7</span>
     </label>
     <input
       disabled={props.layoutMode == "NONE" ? true : false}

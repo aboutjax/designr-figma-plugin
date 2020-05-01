@@ -29,13 +29,10 @@ const App = () => {
       "*"
     );
   };
-  let onDarkTheme = () => {
-    parent.postMessage({ pluginMessage: { type: "dark-theme" } }, "*");
+  let onThemeSwap = () => {
+    parent.postMessage({ pluginMessage: { type: "swap-theme" } }, "*");
   };
-  let onLightTheme = () => {
-    parent.postMessage({ pluginMessage: { type: "light-theme" } }, "*");
-  };
-
+  
   let onPaddingHorizontalSlider = (val) => {
     let sliderValue = val.target.value;
     setHorizontalPadding(sliderValue);
@@ -135,26 +132,23 @@ const App = () => {
     <div className="container">
       <div className="section">
         <h4>Colours</h4>
-        <p>Check color consistency for the selected frame.</p>
+        <p>Check stray colors for the selected frame.</p>
         <button className="button" id="check-colors" onClick={onColorCheck}>
           Check Colors
         </button>
       </div>
       <div className="section">
-        <h4>Themes</h4>
-        <p>Convert selected frame to light / dark theme.</p>
+        <h4>Light & Dark Themes</h4>
+        <p>Convert frame to opposite theme.</p>
         <div className="button-group">
           <div className="flex">
-            <button className="button" id="dark-theme" onClick={onDarkTheme}>
-              Dark
-            </button>
-            <button className="button" id="light-theme" onClick={onLightTheme}>
-              Light
+            <button className="button" id="theme-swap" onClick={onThemeSwap}>
+              Swap Theme
             </button>
           </div>
         </div>
       </div>
-
+{/* 
       <div className="section">
         <h4>Enable Auto Layout</h4>
         <p>Force Auto Layout on selected frames.</p>
@@ -176,7 +170,7 @@ const App = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
       {selected && layoutMode !== "NONE" ? (
         <AutoLayoutSpacingSection
           layoutMode={layoutMode}
@@ -197,6 +191,7 @@ const App = () => {
 
 const AutoLayoutSpacingSection = (props) => (
   <div className="section">
+    <h4>Spacing</h4>
     <div className="section">
       <h4 className="tiny-header">Horizontal Padding</h4>
       <SliderHorizontal
@@ -230,7 +225,7 @@ const AutoLayoutSpacingSection = (props) => (
       id="check-spacing"
       onClick={props.onSpacingCheck}
     >
-      Apply Spacing From Name
+      Update from Name
     </button>
   </div>
 );

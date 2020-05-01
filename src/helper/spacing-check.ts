@@ -2,10 +2,10 @@ const SpacingCheckTraverse = (nodes) => {
   for (const node of nodes) {
     let name = node.name;
 
-    let paddingAllRegex = /\b(?:pa-xxs|pa-xs|pa-s|pa-m|pa-l|pa-xl|pa-xxl|pa-none)\b/g;
-    let paddingHorizontalRegex = /\b(?:ph-xxs|ph-xs|ph-s|ph-m|ph-l|ph-xl|ph-xxl|ph-none)\b/g;
-    let paddingVerticalRegex = /\b(?:pv-xxs|pv-xs|pv-s|pv-m|pv-l|pv-xl|pv-xxl|pv-none)\b/g;
-    let itemSpacingAllRegex = /\b(?:sp-xxs|sp-xs|sp-s|sp-m|sp-l|sp-xl|sp-xxl|sp-none)\b/g;
+    let paddingAllRegex = /\b(?:pa-1|pa-2|pa-3|pa-4|pa-5|pa-6|pa-7|pa-none)\b/g;
+    let paddingHorizontalRegex = /\b(?:ph-1|ph-2|ph-3|ph-4|ph-5|ph-6|ph-7|ph-none)\b/g;
+    let paddingVerticalRegex = /\b(?:pv-1|pv-2|pv-3|pv-4|pv-5|pv-6|pv-7|pv-none)\b/g;
+    let itemSpacingAllRegex = /\b(?:sp-1|sp-2|sp-3|sp-4|sp-5|sp-6|sp-7|sp-none)\b/g;
     let autolayoutRegex = /\b(?:vertical|horizontal)\b/g;
 
     let matchPaddingAll = name.match(paddingAllRegex);
@@ -14,10 +14,14 @@ const SpacingCheckTraverse = (nodes) => {
     let matchItemSpacing = name.match(itemSpacingAllRegex);
     let matchAutoLayoutDirection = name.match(autolayoutRegex);
 
+    console.log(matchPaddingAll);
+    
+
     if (matchAutoLayoutDirection == null) {
       node.layoutMode = "VERTICAL";
     } else {
       console.log("enable auto layout");
+      
       switch (matchAutoLayoutDirection[0]) {
         case "vertical":
           node.layoutMode = "VERTICAL";
@@ -31,35 +35,35 @@ const SpacingCheckTraverse = (nodes) => {
     } else {
       console.log("has spacing");
       switch (matchItemSpacing[0]) {
-        case "sp-none":
+        case "sp-0":
           node.itemSpacing = 0;
           break;
-        case "sp-xxs":
+        case "sp-1":
           node.itemSpacing = 4;
           break;
-        case "sp-xs":
+        case "sp-2":
           node.itemSpacing = 8;
           break;
-        case "sp-s":
+        case "sp-3":
           node.itemSpacing = 16;
           break;
-        case "sp-m":
+        case "sp-4":
           node.itemSpacing = 24;
           break;
-        case "sp-l":
+        case "sp-5":
           node.itemSpacing = 32;
           break;
-        case "sp-xl":
+        case "sp-6":
           node.itemSpacing = 40;
           break;
-        case "sp-xxl":
+        case "sp-7":
           node.itemSpacing = 48;
           break;
       }
     }
 
     if (matchPaddingAll == null) {
-      // console.log("no");
+      console.log("no");
     } else {
       console.log("has padding all");
       switch (matchPaddingAll[0]) {
@@ -67,31 +71,31 @@ const SpacingCheckTraverse = (nodes) => {
           node.horizontalPadding = 0;
           node.verticalPadding = 0;
           break;
-        case "pa-xxs":
+        case "pa-1":
           node.horizontalPadding = 4;
           node.verticalPadding = 4;
           break;
-        case "pa-xs":
+        case "pa-2":
           node.horizontalPadding = 8;
           node.verticalPadding = 8;
           break;
-        case "pa-s":
+        case "pa-3":
           node.horizontalPadding = 16;
           node.verticalPadding = 16;
           break;
-        case "pa-m":
+        case "pa-4":
           node.horizontalPadding = 24;
           node.verticalPadding = 24;
           break;
-        case "pa-l":
+        case "pa-5":
           node.horizontalPadding = 32;
           node.verticalPadding = 32;
           break;
-        case "pa-xl":
+        case "pa-6":
           node.horizontalPadding = 40;
           node.verticalPadding = 40;
           break;
-        case "pa-xxl":
+        case "pa-7":
           node.horizontalPadding = 48;
           node.verticalPadding = 48;
           break;
@@ -106,25 +110,25 @@ const SpacingCheckTraverse = (nodes) => {
         case "ph-none":
           node.horizontalPadding = 0;
           break;
-        case "ph-xxs":
+        case "ph-1":
           node.horizontalPadding = 4;
           break;
-        case "ph-xs":
+        case "ph-2":
           node.horizontalPadding = 8;
           break;
-        case "ph-s":
+        case "ph-3":
           node.horizontalPadding = 16;
           break;
-        case "ph-m":
+        case "ph-4":
           node.horizontalPadding = 24;
           break;
-        case "ph-l":
+        case "ph-5":
           node.horizontalPadding = 32;
           break;
-        case "ph-xl":
+        case "ph-6":
           node.horizontalPadding = 40;
           break;
-        case "ph-xxl":
+        case "ph-7":
           node.horizontalPadding = 48;
           break;
       }
@@ -138,25 +142,25 @@ const SpacingCheckTraverse = (nodes) => {
         case "pv-none":
           node.verticalPadding = 0;
           break;
-        case "pv-xxs":
+        case "pv-1":
           node.verticalPadding = 4;
           break;
-        case "pv-xs":
+        case "pv-2":
           node.verticalPadding = 8;
           break;
-        case "pv-s":
+        case "pv-3":
           node.verticalPadding = 16;
           break;
-        case "pv-m":
+        case "pv-4":
           node.verticalPadding = 24;
           break;
-        case "pv-l":
+        case "pv-5":
           node.verticalPadding = 32;
           break;
-        case "pv-xl":
+        case "pv-6":
           node.verticalPadding = 40;
           break;
-        case "pv-xxl":
+        case "pv-7":
           node.verticalPadding = 48;
           break;
       }
