@@ -59,5 +59,3 @@ If you want to contribute, run this plugin locally on your machine and watch for
 2. `npx webpack` to watch the `./src` folder and compile any code changes.
 3. To see the changes after each compile, bring the Figma desktop app to the foreground, and use `command + option + p` shortcut which tells Figma to re-run the last plugin.
 
-$$
-$$
