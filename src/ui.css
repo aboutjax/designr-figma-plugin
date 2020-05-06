@@ -409,11 +409,6 @@ pre tt {
   /* background-color: gray; */
 }
 
-.padding-input-range-label .label {
-  /* display: inline-block; */
-  /* width: 14%; */
-}
-
 .padding-input-range-label .label:first-of-type {
   text-align: left;
 }
@@ -488,11 +483,6 @@ button {
   background: black;
   color: white;
   margin-bottom: 1em;
-}
-
-.container {
-  /* padding: 8px; */
-  /* text-align: left; */
 }
 
 .section {

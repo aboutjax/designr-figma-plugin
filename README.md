@@ -1,4 +1,4 @@
-## DESIGNR Figma Plugin
+# DESIGNR Figma Plugin
 
 ![image](./assets/cover.png)
 
@@ -44,6 +44,12 @@ Adjust auto layout spacings with spacing defined from our tokens. Visible when y
 **Why?** Gets us thinking in sizes (ie. S, M, L ) instead of pixel values (ie. 16px, 24px, 32px)
 
 **Note** There’s a weird Figma glitch: After you change a slider value, your cursor needs to go back to Figma canvas to update the frame to the most up to date value. Not sure why, it’s a weird Figma plugin issue I couldn’t fix.
+
+## Layout Grids shortcut
+![Layout Grids shortcut](./assets/grids-overview.png)
+**What?** A shortcut for applying layout grids based on our spacing values. Inspired by Google Chrome's box model visualisation, this should look familar.
+
+**Why?** Figma's layout grids doesn't let us apply multiple styles at a time. This is a workaround.
 
 # 💬 To Contribute
 
