@@ -1,22 +1,24 @@
 const onSelectionChange = (node) => {
   if (node) {
-    // console.log("yes");
+    console.log(node);
     let horizontalPadding = node.horizontalPadding;
     let verticalPadding = node.verticalPadding;
     let itemSpacing = node.itemSpacing;
     let layoutMode = node.layoutMode;
+    let type = node.type;
 
     let obj = {
       horizontalPadding: horizontalPadding,
       verticalPadding: verticalPadding,
       itemSpacing: itemSpacing,
       layoutMode: layoutMode,
+      type: type,
     };
 
     figma.ui.postMessage(obj);
   } else {
     // console.log("no");
-    // figma.ui.postMessage("nothing selected");
+    figma.ui.postMessage("nothing selected");
   }
 };
 

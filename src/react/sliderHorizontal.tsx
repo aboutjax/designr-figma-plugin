@@ -3,8 +3,7 @@ const SliderHorizontal = (props) => (
   <div>
     <label
       className="padding-input-range-label"
-      htmlFor="padding-horizontal-slider"
-    >
+      htmlFor="padding-horizontal-slider">
       <span className="label">0</span>
       <span className="label">1</span>
       <span className="label">2</span>

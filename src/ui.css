@@ -470,6 +470,7 @@ h3 {
 h4 {
   margin-top: 0;
   margin-bottom: 0.3em;
+  font-size: 14px;
 }
 p {
   font-size: 14px;
@@ -513,7 +514,7 @@ button {
   color: gray;
   text-transform: uppercase;
   font-size: 10px;
-  text-align: center;
+  text-align: left;
 }
 
 .warning {
@@ -536,4 +537,30 @@ button {
   background-color: white;
   color: black;
   border: 1px solid lightgray;
+}
+
+.layout-grid-label {
+  height: 48px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  /* border: 1px solid; */
+  border-radius: 4px;
+  align-items: center;
+  /* padding: 8px; */
+  /* margin-top: 16px; */
+  background-color: white;
+}
+
+.layout-grid-label:hover {
+  background-color: #f7f7f7;
+}
+
+.layout-grid-label .layout-grid-input:checked {
+  background-color: #333333;
+  color: white;
+}
+
+.layout-grid-input {
+  margin-right: 8px;
 }

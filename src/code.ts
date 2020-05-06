@@ -18,6 +18,7 @@ import {
   PaddingVerticalSlider,
   ItemSpacing,
 } from "./helper/spacing-slider";
+import { SetLayoutGrid } from "./helper/layout-grid";
 
 import { onSelectionChange } from "./helper/callback";
 
@@ -27,7 +28,7 @@ figma.showUI(__html__);
 // Calls to "parent.postMessage" from within the HTML page will trigger this
 // callback. The callback will be passed the "pluginMessage" property of the
 // posted message.
-figma.ui.resize(200, 650);
+figma.ui.resize(300, 850);
 
 figma.on("selectionchange", () => {
   let thisSelection = figma.currentPage.selection[0];
@@ -37,7 +38,7 @@ figma.on("selectionchange", () => {
 figma.ui.onmessage = (msg) => {
   if (msg.type === "swap-theme") {
     ThemeSwap(figma.currentPage.selection[0]);
-  }  else if (msg.type === "color-checker") {
+  } else if (msg.type === "color-checker") {
     ColorCheckTraverse(figma.currentPage.selection[0]);
   } else if (msg.type === "spacing-checker") {
     SpacingCheckTraverse(figma.currentPage.selection);
@@ -51,6 +52,8 @@ figma.ui.onmessage = (msg) => {
     ForceAutoLayoutHorizontal(figma.currentPage.selection);
   } else if (msg.type === "force-auto-layout-vertical") {
     ForceAutoLayoutVertical(figma.currentPage.selection);
+  } else if (msg.type === "set-layout-grid") {
+    SetLayoutGrid(figma.currentPage.selection, msg);
   }
 
   // Make sure to close the plugin when you're done. Otherwise the plugin will

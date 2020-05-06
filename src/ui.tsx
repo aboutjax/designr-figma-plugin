@@ -6,6 +6,7 @@ import "./ui.css";
 import { SliderHorizontal } from "./react/SliderHorizontal";
 import { SliderVertical } from "./react/sliderVertical";
 import { SliderItemSpacing } from "./react/sliderItemSpacing";
+import { LayoutGridForm } from "./react/layoutGridControllers/layoutGridForm";
 
 const App = () => {
   let onColorCheck = () => {
@@ -29,10 +30,11 @@ const App = () => {
       "*"
     );
   };
+
   let onThemeSwap = () => {
     parent.postMessage({ pluginMessage: { type: "swap-theme" } }, "*");
   };
-  
+
   let onPaddingHorizontalSlider = (val) => {
     let sliderValue = val.target.value;
     setHorizontalPadding(sliderValue);
@@ -67,6 +69,17 @@ const App = () => {
         pluginMessage: {
           type: "item-spacing-slider",
           sliderValue: sliderValue,
+        },
+      },
+      "*"
+    );
+  };
+  let SetLayoutGrid = (val) => {
+    parent.postMessage(
+      {
+        pluginMessage: {
+          type: "set-layout-grid",
+          layoutGridOptions: val,
         },
       },
       "*"
@@ -114,11 +127,13 @@ const App = () => {
       let selectedFrameVerticalPadding = val.data.pluginMessage.verticalPadding;
       let selectedFrameItemSpacing = val.data.pluginMessage.itemSpacing;
       let selectedFrameLayoutMode = val.data.pluginMessage.layoutMode;
+      let selectedFrameType = val.data.pluginMessage.type;
 
       setLayoutMode(selectedFrameLayoutMode);
       pxToSize(setHorizontalPadding, selectedFrameHorizontalPadding);
       pxToSize(setVerticalPadding, selectedFrameVerticalPadding);
       pxToSize(setItemSpacing, selectedFrameItemSpacing);
+      setType(selectedFrameType);
     }
   };
 
@@ -127,6 +142,7 @@ const App = () => {
   const [itemSpacing, setItemSpacing] = React.useState(1);
   const [layoutMode, setLayoutMode] = React.useState("NONE");
   const [selected, setSelected] = React.useState(false);
+  const [type, setType] = React.useState(null);
 
   return (
     <div className="container">
@@ -148,30 +164,13 @@ const App = () => {
           </div>
         </div>
       </div>
-{/* 
-      <div className="section">
-        <h4>Enable Auto Layout</h4>
-        <p>Force Auto Layout on selected frames.</p>
-        <div className="button-group">
-          <div className="flex">
-            <button
-              className="button secondary"
-              id="check-spacing"
-              onClick={onForceAutoLayoutVertical}
-            >
-              Vertical
-            </button>
-            <button
-              className="button secondary"
-              id="check-spacing"
-              onClick={onForceAutoLayoutHorizontal}
-            >
-              Horizontal
-            </button>
-          </div>
-        </div>
-      </div> */}
-      {selected && layoutMode !== "NONE" ? (
+
+      <div className="section" style={{ position: "relative" }}>
+        <h4>Layout Grids</h4>
+        <LayoutGridForm onChange={SetLayoutGrid} />
+      </div>
+
+      {selected && layoutMode !== "NONE" && type == "FRAME" ? (
         <AutoLayoutSpacingSection
           layoutMode={layoutMode}
           horizontalPadding={horizontalPadding}
@@ -191,7 +190,7 @@ const App = () => {
 
 const AutoLayoutSpacingSection = (props) => (
   <div className="section">
-    <h4>Spacing</h4>
+    <h4>Auto Layout</h4>
     <div className="section">
       <h4 className="tiny-header">Horizontal Padding</h4>
       <SliderHorizontal
@@ -223,8 +222,7 @@ const AutoLayoutSpacingSection = (props) => (
     <button
       className="button"
       id="check-spacing"
-      onClick={props.onSpacingCheck}
-    >
+      onClick={props.onSpacingCheck}>
       Update from Name
     </button>
   </div>
