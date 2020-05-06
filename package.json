@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/lodash": "^4.14.150",
     "@types/styled-components": "^5.1.0",
     "css-loader": "^3.1.0",
     "csstype": "^2.6.10",

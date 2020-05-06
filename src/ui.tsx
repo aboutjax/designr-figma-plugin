@@ -128,12 +128,16 @@ const App = () => {
       let selectedFrameItemSpacing = val.data.pluginMessage.itemSpacing;
       let selectedFrameLayoutMode = val.data.pluginMessage.layoutMode;
       let selectedFrameType = val.data.pluginMessage.type;
+      let selectedFrameLayoutGrids = val.data.pluginMessage.layoutGrids;
+
+      // console.log(selectedFrameLayoutGrids);
 
       setLayoutMode(selectedFrameLayoutMode);
       pxToSize(setHorizontalPadding, selectedFrameHorizontalPadding);
       pxToSize(setVerticalPadding, selectedFrameVerticalPadding);
       pxToSize(setItemSpacing, selectedFrameItemSpacing);
       setType(selectedFrameType);
+      setLayoutGrids(selectedFrameLayoutGrids);
     }
   };
 
@@ -143,6 +147,7 @@ const App = () => {
   const [layoutMode, setLayoutMode] = React.useState("NONE");
   const [selected, setSelected] = React.useState(false);
   const [type, setType] = React.useState(null);
+  const [layoutGrids, setLayoutGrids] = React.useState();
 
   return (
     <div className="container">
@@ -167,7 +172,10 @@ const App = () => {
 
       <div className="section" style={{ position: "relative" }}>
         <h4>Layout Grids</h4>
-        <LayoutGridForm onChange={SetLayoutGrid} />
+        <LayoutGridForm
+          selectedLayoutGrids={layoutGrids}
+          onChange={SetLayoutGrid}
+        />
       </div>
 
       {selected && layoutMode !== "NONE" && type == "FRAME" ? (

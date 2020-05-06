@@ -11,7 +11,7 @@ const SetLayoutGrid = (nodes, msg) => {
   console.log(msg.layoutGridOptions);
 
   for (const node of nodes) {
-    node.layoutGrids = [];
+    // node.layoutGrids = [];
 
     const horizontalPaddingSliderValue = msg.layoutGridOptions[0].value;
     const verticalPaddingSliderValue = msg.layoutGridOptions[1].value;

@@ -6,6 +6,7 @@ const onSelectionChange = (node) => {
     let itemSpacing = node.itemSpacing;
     let layoutMode = node.layoutMode;
     let type = node.type;
+    let layoutGrids = node.layoutGrids;
 
     let obj = {
       horizontalPadding: horizontalPadding,
@@ -13,6 +14,7 @@ const onSelectionChange = (node) => {
       itemSpacing: itemSpacing,
       layoutMode: layoutMode,
       type: type,
+      layoutGrids: layoutGrids,
     };
 
     figma.ui.postMessage(obj);

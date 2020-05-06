@@ -1,17 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
 
-console.log(styled);
-
-const StyledInput = styled.input`
-  appearance: none;
-  border: 1px solid gray;
-  border-radius: 4px;
-  height: 40px;
-  padding: 12px;
-  font-size: 16px;
-`;
-
 const StyledOption = styled.div`
   margin-top: 1em;
   margin-bottom: 1em;
