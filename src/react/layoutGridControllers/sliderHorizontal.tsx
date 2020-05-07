@@ -29,6 +29,7 @@ const Option = (props) => (
           name={props.type}
           value="0"
           onChange={props.onChange}
+          checked={props.value == 0 ? true : false}
         />
         <span>0</span>
       </StyledRadio>
@@ -39,6 +40,7 @@ const Option = (props) => (
           name={props.type}
           value="1"
           onChange={props.onChange}
+          checked={props.value == 1 ? true : false}
         />
         <span>1</span>
       </StyledRadio>
@@ -49,6 +51,7 @@ const Option = (props) => (
           name={props.type}
           value="2"
           onChange={props.onChange}
+          checked={props.value == 2 ? true : false}
         />
         <span>2</span>
       </StyledRadio>
@@ -59,6 +62,7 @@ const Option = (props) => (
           name={props.type}
           value="3"
           onChange={props.onChange}
+          checked={props.value == 3 ? true : false}
         />
         <span>3</span>
       </StyledRadio>
@@ -69,6 +73,7 @@ const Option = (props) => (
           name={props.type}
           value="4"
           onChange={props.onChange}
+          checked={props.value == 4 ? true : false}
         />
         <span>4</span>
       </StyledRadio>
@@ -79,6 +84,7 @@ const Option = (props) => (
           name={props.type}
           value="5"
           onChange={props.onChange}
+          checked={props.value == 5 ? true : false}
         />
         <span>5</span>
       </StyledRadio>
@@ -89,6 +95,7 @@ const Option = (props) => (
           name={props.type}
           value="6"
           onChange={props.onChange}
+          checked={props.value == 6 ? true : false}
         />
         <span>6</span>
       </StyledRadio>
@@ -99,6 +106,7 @@ const Option = (props) => (
           name={props.type}
           value="7"
           onChange={props.onChange}
+          checked={props.value == 7 ? true : false}
         />
         <span>7</span>
       </StyledRadio>
