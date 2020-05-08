@@ -163,6 +163,24 @@ export const maxWidthGrids = [
   },
 ];
 
+export const maxWidthLeftAlignedGrids = [
+  {
+    pattern: "COLUMNS",
+    visible: true,
+    color: {
+      r: 0,
+      g: 0.4588235318660736,
+      b: 1,
+      a: 0.10000000298023224,
+    },
+    gutterSize: 1,
+    alignment: "MIN",
+    count: 1,
+    sectionSize: 960,
+    offset: 0,
+  },
+];
+
 export const getMaxWidthGrids = () => {
   return new Promise((resolve, reject) => {
     resolve(maxWidthGrids);

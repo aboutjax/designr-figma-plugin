@@ -173,6 +173,7 @@ const App = () => {
       <div className="section" style={{ position: "relative" }}>
         <h4>Layout Grids</h4>
         <LayoutGridForm
+          selected={selected}
           selectedLayoutGrids={layoutGrids}
           onChange={SetLayoutGrid}
         />

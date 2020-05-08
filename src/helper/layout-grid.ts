@@ -5,10 +5,11 @@ import {
   getMaxWidthGrids,
   maxWidthGrids,
   columnGrids,
+  maxWidthLeftAlignedGrids,
 } from "../theme-styles/LayoutGrids";
 
 const SetLayoutGrid = (nodes, msg) => {
-  console.log(msg.layoutGridOptions);
+  // console.log(msg.layoutGridOptions);
 
   for (const node of nodes) {
     // node.layoutGrids = [];
@@ -18,6 +19,7 @@ const SetLayoutGrid = (nodes, msg) => {
     const showBaselineRows = msg.layoutGridOptions[2].value;
     const showMaxWidth = msg.layoutGridOptions[3].value;
     const showColumns = msg.layoutGridOptions[4].value;
+    const showMaxWidthLeftAligned = msg.layoutGridOptions[5].value;
 
     let allGrids = [];
 
@@ -110,8 +112,18 @@ const SetLayoutGrid = (nodes, msg) => {
 
     if (showMaxWidth) {
       for (const grid of maxWidthGrids) {
-        console.log(grid);
+        // console.log(grid);
 
+        allGrids.push(grid);
+
+        node.layoutGrids = allGrids;
+      }
+    } else {
+      node.layoutGrids = allGrids;
+    }
+
+    if (showMaxWidthLeftAligned) {
+      for (const grid of maxWidthLeftAlignedGrids) {
         allGrids.push(grid);
 
         node.layoutGrids = allGrids;
@@ -122,7 +134,7 @@ const SetLayoutGrid = (nodes, msg) => {
 
     if (showColumns) {
       for (const grid of columnGrids) {
-        console.log(grid);
+        // console.log(grid);
 
         allGrids.push(grid);
 

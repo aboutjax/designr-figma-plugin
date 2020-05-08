@@ -11,6 +11,7 @@ const LayoutGridForm = (props) => {
     { type: "baselineGrid", value: false },
     { type: "maxWidth", value: false },
     { type: "columns", value: false },
+    { type: "maxWidthLeftAligned", value: false },
   ]);
 
   const [
@@ -22,12 +23,24 @@ const LayoutGridForm = (props) => {
   const [paddingVertical, setPaddingVertical] = useState(0);
   const [baseline, setBaseline] = useState(false);
   const [maxWidth, setMaxWidth] = useState(false);
+  const [maxWidthLeftAligned, setMaxWidthLeftAligned] = useState(false);
   const [columns, setColumns] = useState(false);
 
+  let updateLayoutGridStateFromSelectedFrame = (type, value) => {
+    let newArray = layoutGridState.map((grid) => {
+      if (grid.type === type) {
+        grid.value = value;
+      } else {
+        // Do nothing
+      }
+      return grid;
+    });
+    setLayoutGridState(newArray);
+  };
+
   React.useEffect(() => {
-    // console.log(selectedFrameLayoutGrids);
-    // checkSelectedFrame(props.selectedLayoutGrids);
     checkSelectedFrame();
+    console.log("state to paint:", layoutGridState);
   }, [props.selectedLayoutGrids]);
 
   let checkSelectedFrame = async () => {
@@ -78,20 +91,28 @@ const LayoutGridForm = (props) => {
     // Set States
     if (hasHorizontalPadding1) {
       setPaddingHorizontal(1);
+      updateLayoutGridStateFromSelectedFrame("horizontal", "1");
     } else if (hasHorizontalPadding2) {
       setPaddingHorizontal(2);
+      updateLayoutGridStateFromSelectedFrame("horizontal", "2");
     } else if (hasHorizontalPadding3) {
       setPaddingHorizontal(3);
+      updateLayoutGridStateFromSelectedFrame("horizontal", "3");
     } else if (hasHorizontalPadding4) {
       setPaddingHorizontal(4);
+      updateLayoutGridStateFromSelectedFrame("horizontal", "4");
     } else if (hasHorizontalPadding5) {
       setPaddingHorizontal(5);
+      updateLayoutGridStateFromSelectedFrame("horizontal", "5");
     } else if (hasHorizontalPadding6) {
       setPaddingHorizontal(6);
+      updateLayoutGridStateFromSelectedFrame("horizontal", "6");
     } else if (hasHorizontalPadding7) {
       setPaddingHorizontal(7);
+      updateLayoutGridStateFromSelectedFrame("horizontal", "7");
     } else {
       setPaddingHorizontal(0);
+      updateLayoutGridStateFromSelectedFrame("horizontal", "0");
     }
 
     // Vertical Padding 1
@@ -139,20 +160,28 @@ const LayoutGridForm = (props) => {
     // Set States
     if (hasVerticalPadding1) {
       setPaddingVertical(1);
+      updateLayoutGridStateFromSelectedFrame("vertical", "1");
     } else if (hasVerticalPadding2) {
       setPaddingVertical(2);
+      updateLayoutGridStateFromSelectedFrame("vertical", "2");
     } else if (hasVerticalPadding3) {
       setPaddingVertical(3);
+      updateLayoutGridStateFromSelectedFrame("vertical", "3");
     } else if (hasVerticalPadding4) {
       setPaddingVertical(4);
+      updateLayoutGridStateFromSelectedFrame("vertical", "4");
     } else if (hasVerticalPadding5) {
       setPaddingVertical(5);
+      updateLayoutGridStateFromSelectedFrame("vertical", "5");
     } else if (hasVerticalPadding6) {
       setPaddingVertical(6);
+      updateLayoutGridStateFromSelectedFrame("vertical", "6");
     } else if (hasVerticalPadding7) {
       setPaddingVertical(7);
+      updateLayoutGridStateFromSelectedFrame("vertical", "7");
     } else {
       setPaddingVertical(0);
+      updateLayoutGridStateFromSelectedFrame("vertical", "0");
     }
 
     // Max Width
@@ -163,8 +192,31 @@ const LayoutGridForm = (props) => {
 
     if (hasMaxWidth) {
       setMaxWidth(true);
+      updateLayoutGridStateFromSelectedFrame("maxWidth", true);
     } else {
       setMaxWidth(false);
+      updateLayoutGridStateFromSelectedFrame("maxWidth", false);
+    }
+
+    // Max Width Left Aligned
+    let isMaxWidthLeftAligned = (element) => {
+      return (
+        element["pattern"] === "COLUMNS" &&
+        element["sectionSize"] === 960 &&
+        element["alignment"] === "MIN"
+      );
+    };
+    let hasMaxWidthLeftAligned = grids.some(isMaxWidthLeftAligned);
+
+    if (hasMaxWidthLeftAligned) {
+      setMaxWidthLeftAligned(true);
+      console.log("found left alignes");
+
+      updateLayoutGridStateFromSelectedFrame("maxWidthLeftAligned", true);
+    } else {
+      console.log("nope");
+      setMaxWidthLeftAligned(false);
+      updateLayoutGridStateFromSelectedFrame("maxWidthLeftAligned", false);
     }
 
     // Columns
@@ -175,8 +227,10 @@ const LayoutGridForm = (props) => {
 
     if (hasColumns) {
       setColumns(true);
+      updateLayoutGridStateFromSelectedFrame("columns", true);
     } else {
       setColumns(false);
+      updateLayoutGridStateFromSelectedFrame("columns", false);
     }
   };
 
@@ -251,6 +305,24 @@ const LayoutGridForm = (props) => {
     // Send it up to update figma canvas
     props.onChange(newArray);
   };
+  let handleMaxWidthLeftAligned = (val) => {
+    let targetValue = val.target.checked;
+    let newArray = layoutGridState.map((grid) => {
+      if (grid.type === "maxWidthLeftAligned") {
+        grid.value = targetValue;
+      } else {
+        // Do nothing
+      }
+      return grid;
+    });
+
+    // Update state
+    setLayoutGridState(newArray);
+    setMaxWidthLeftAligned(targetValue);
+
+    // Send it up to update figma canvas
+    props.onChange(newArray);
+  };
   let handleColumns = (val) => {
     let targetValue = val.target.checked;
     let newArray = layoutGridState.map((grid) => {
@@ -277,6 +349,7 @@ const LayoutGridForm = (props) => {
       { type: "baselineGrid", value: false },
       { type: "maxWidth", value: false },
       { type: "columns", value: false },
+      { type: "maxWidthLeftAligned", value: false },
     ]);
   };
 
@@ -299,6 +372,10 @@ const LayoutGridForm = (props) => {
       {/* // Deprecated */}
       {/* <BasegridCheck onChange={handleBaselineChange} /> */}
       <MaxWidthCheck value={maxWidth} onChange={handleMaxWidth} />
+      <MaxWidthLeftAlignCheck
+        value={maxWidthLeftAligned}
+        onChange={handleMaxWidthLeftAligned}
+      />
       <ColumnsCheck value={columns} onChange={handleColumns} />
     </div>
   );
@@ -332,6 +409,25 @@ function MaxWidthCheck(props) {
           className="layout-grid-input"
           type="checkbox"
           id="max-width"
+          name="layout-grid"
+          onChange={props.onChange}
+          checked={props.value}
+        />
+      </label>
+    </div>
+  );
+}
+
+function MaxWidthLeftAlignCheck(props) {
+  return (
+    <div>
+      <h4 className="tiny-header">Max Width (Left Aligned)</h4>
+      <label htmlFor="max-width-left-aligned" className="layout-grid-label">
+        <span>Show max width (left aligned)</span>
+        <input
+          className="layout-grid-input"
+          type="checkbox"
+          id="max-width-left-aligned"
           name="layout-grid"
           onChange={props.onChange}
           checked={props.value}
