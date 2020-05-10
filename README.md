@@ -2,7 +2,7 @@
 
 ![image](./assets/cover.png)
 
-This is a figma plugin that helps us achieve consistent color & spacing for Wahoo SYSTM.
+This is a figma plugin that helps us achieve consistent color & spacing.
 
 # 🎁 Installation
 
