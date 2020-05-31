@@ -80,6 +80,10 @@ export const DarkUiColors = [
     styleKey: "84ab0f298ea8fcd0b82ac89298ad51140ca7b75a",
   },
   {
+    name: "dark ui / divider / divider.strong",
+    styleKey: "e9360a13f84514ee4b3977d4b6949f9bab63cb4f",
+  },
+  {
     name: "dark ui / 4DP / FTP",
     styleKey: "7bb028ff7d873486678b7c6764fc50f39e571eb6",
   },
@@ -177,6 +181,10 @@ export const LightUiColors = [
   {
     name: "light ui / divider / divider",
     styleKey: "ee4ddce2e56ad47c4216d5827a283b943a794c78",
+  },
+  {
+    name: "light ui / divider / divider.strong",
+    styleKey: "17adbe4e27ba9b087f61af142deeb07fc0c01540",
   },
   {
     name: "light ui / 4DP / FTP",
