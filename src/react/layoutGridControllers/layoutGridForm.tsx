@@ -60,33 +60,39 @@ const LayoutGridForm = (props) => {
 
     // Horizontal Padding 3
     let isHorizontalPadding3 = (element) => {
-      return element["pattern"] === "COLUMNS" && element["sectionSize"] === 16;
+      return element["pattern"] === "COLUMNS" && element["sectionSize"] === 12;
     };
     let hasHorizontalPadding3 = grids.some(isHorizontalPadding3);
 
     // Horizontal Padding 4
     let isHorizontalPadding4 = (element) => {
-      return element["pattern"] === "COLUMNS" && element["sectionSize"] === 24;
+      return element["pattern"] === "COLUMNS" && element["sectionSize"] === 16;
     };
     let hasHorizontalPadding4 = grids.some(isHorizontalPadding4);
 
     // Horizontal Padding 5
     let isHorizontalPadding5 = (element) => {
-      return element["pattern"] === "COLUMNS" && element["sectionSize"] === 32;
+      return element["pattern"] === "COLUMNS" && element["sectionSize"] === 24;
     };
     let hasHorizontalPadding5 = grids.some(isHorizontalPadding5);
 
     // Horizontal Padding 6
     let isHorizontalPadding6 = (element) => {
-      return element["pattern"] === "COLUMNS" && element["sectionSize"] === 40;
+      return element["pattern"] === "COLUMNS" && element["sectionSize"] === 32;
     };
     let hasHorizontalPadding6 = grids.some(isHorizontalPadding6);
 
     // Horizontal Padding 7
     let isHorizontalPadding7 = (element) => {
-      return element["pattern"] === "COLUMNS" && element["sectionSize"] === 48;
+      return element["pattern"] === "COLUMNS" && element["sectionSize"] === 40;
     };
     let hasHorizontalPadding7 = grids.some(isHorizontalPadding7);
+
+    // Horizontal Padding 8
+    let isHorizontalPadding8 = (element) => {
+      return element["pattern"] === "COLUMNS" && element["sectionSize"] === 48;
+    };
+    let hasHorizontalPadding8 = grids.some(isHorizontalPadding8);
 
     // Set States
     if (hasHorizontalPadding1) {
@@ -110,6 +116,9 @@ const LayoutGridForm = (props) => {
     } else if (hasHorizontalPadding7) {
       setPaddingHorizontal(7);
       updateLayoutGridStateFromSelectedFrame("horizontal", "7");
+    } else if (hasHorizontalPadding8) {
+      setPaddingHorizontal(8);
+      updateLayoutGridStateFromSelectedFrame("horizontal", "8");
     } else {
       setPaddingHorizontal(0);
       updateLayoutGridStateFromSelectedFrame("horizontal", "0");
@@ -129,33 +138,39 @@ const LayoutGridForm = (props) => {
 
     // Vertical Padding 3
     let isVerticalPadding3 = (element) => {
-      return element["pattern"] === "ROWS" && element["sectionSize"] === 16;
+      return element["pattern"] === "ROWS" && element["sectionSize"] === 8;
     };
     let hasVerticalPadding3 = grids.some(isVerticalPadding3);
 
     // Vertical Padding 4
     let isVerticalPadding4 = (element) => {
-      return element["pattern"] === "ROWS" && element["sectionSize"] === 24;
+      return element["pattern"] === "ROWS" && element["sectionSize"] === 16;
     };
     let hasVerticalPadding4 = grids.some(isVerticalPadding4);
 
     // Vertical Padding 5
     let isVerticalPadding5 = (element) => {
-      return element["pattern"] === "ROWS" && element["sectionSize"] === 32;
+      return element["pattern"] === "ROWS" && element["sectionSize"] === 24;
     };
     let hasVerticalPadding5 = grids.some(isVerticalPadding5);
 
     // Vertical Padding 6
     let isVerticalPadding6 = (element) => {
-      return element["pattern"] === "ROWS" && element["sectionSize"] === 40;
+      return element["pattern"] === "ROWS" && element["sectionSize"] === 32;
     };
     let hasVerticalPadding6 = grids.some(isVerticalPadding6);
 
     // Vertical Padding 7
     let isVerticalPadding7 = (element) => {
-      return element["pattern"] === "ROWS" && element["sectionSize"] === 48;
+      return element["pattern"] === "ROWS" && element["sectionSize"] === 40;
     };
     let hasVerticalPadding7 = grids.some(isVerticalPadding7);
+
+    // Vertical Padding 8
+    let isVerticalPadding8 = (element) => {
+      return element["pattern"] === "ROWS" && element["sectionSize"] === 48;
+    };
+    let hasVerticalPadding8 = grids.some(isVerticalPadding8);
 
     // Set States
     if (hasVerticalPadding1) {
@@ -179,6 +194,9 @@ const LayoutGridForm = (props) => {
     } else if (hasVerticalPadding7) {
       setPaddingVertical(7);
       updateLayoutGridStateFromSelectedFrame("vertical", "7");
+    } else if (hasVerticalPadding8) {
+      setPaddingVertical(8);
+      updateLayoutGridStateFromSelectedFrame("vertical", "8");
     } else {
       setPaddingVertical(0);
       updateLayoutGridStateFromSelectedFrame("vertical", "0");
@@ -235,6 +253,7 @@ const LayoutGridForm = (props) => {
   };
 
   let handleHorizontalChange = (val) => {
+    console.log(val);
     let targetValue = val.target.value;
     let newArray = layoutGridState.map((grid) => {
       if (grid.type === "horizontal") {
@@ -361,12 +380,12 @@ const LayoutGridForm = (props) => {
       />
       <Option
         value={paddingHorizontal}
-        type="horizontal"
+        type='horizontal'
         onChange={handleHorizontalChange}
       />
       <Option
         value={paddingVertical}
-        type="vertical"
+        type='vertical'
         onChange={handleVerticalChange}
       />
       {/* // Deprecated */}
@@ -384,14 +403,14 @@ const LayoutGridForm = (props) => {
 function BasegridCheck(props) {
   return (
     <div>
-      <h4 className="tiny-header">Baseline Grids</h4>
-      <label htmlFor="baseline-grid" className="layout-grid-label">
+      <h4 className='tiny-header'>Baseline Grids</h4>
+      <label htmlFor='baseline-grid' className='layout-grid-label'>
         <span>Show baseline grids</span>
         <input
-          className="layout-grid-input"
-          type="checkbox"
-          id="baseline-grid"
-          name="layout-grid"
+          className='layout-grid-input'
+          type='checkbox'
+          id='baseline-grid'
+          name='layout-grid'
           onChange={props.onChange}
         />
       </label>
@@ -402,14 +421,14 @@ function BasegridCheck(props) {
 function MaxWidthCheck(props) {
   return (
     <div>
-      <h4 className="tiny-header">Max Width</h4>
-      <label htmlFor="max-width" className="layout-grid-label">
+      <h4 className='tiny-header'>Max Width</h4>
+      <label htmlFor='max-width' className='layout-grid-label'>
         <span>Show max width</span>
         <input
-          className="layout-grid-input"
-          type="checkbox"
-          id="max-width"
-          name="layout-grid"
+          className='layout-grid-input'
+          type='checkbox'
+          id='max-width'
+          name='layout-grid'
           onChange={props.onChange}
           checked={props.value}
         />
@@ -421,14 +440,14 @@ function MaxWidthCheck(props) {
 function MaxWidthLeftAlignCheck(props) {
   return (
     <div>
-      <h4 className="tiny-header">Max Width (Left Aligned)</h4>
-      <label htmlFor="max-width-left-aligned" className="layout-grid-label">
+      <h4 className='tiny-header'>Max Width (Left Aligned)</h4>
+      <label htmlFor='max-width-left-aligned' className='layout-grid-label'>
         <span>Show max width (left aligned)</span>
         <input
-          className="layout-grid-input"
-          type="checkbox"
-          id="max-width-left-aligned"
-          name="layout-grid"
+          className='layout-grid-input'
+          type='checkbox'
+          id='max-width-left-aligned'
+          name='layout-grid'
           onChange={props.onChange}
           checked={props.value}
         />
@@ -440,14 +459,14 @@ function MaxWidthLeftAlignCheck(props) {
 function ColumnsCheck(props) {
   return (
     <div>
-      <h4 className="tiny-header">Columns</h4>
-      <label htmlFor="columns" className="layout-grid-label">
+      <h4 className='tiny-header'>Columns</h4>
+      <label htmlFor='columns' className='layout-grid-label'>
         <span>Show columns</span>
         <input
-          className="layout-grid-input"
-          type="checkbox"
-          id="columns"
-          name="layout-grid"
+          className='layout-grid-input'
+          type='checkbox'
+          id='columns'
+          name='layout-grid'
           onChange={props.onChange}
           checked={props.value}
         />
@@ -464,7 +483,7 @@ const ClearAllLink = styled.a`
 
 function ClearLayoutGrid(props) {
   return (
-    <ClearAllLink href="#" onClick={props.onChange}>
+    <ClearAllLink href='#' onClick={props.onChange}>
       Clear All
     </ClearAllLink>
   );
