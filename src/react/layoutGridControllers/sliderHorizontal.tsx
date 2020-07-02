@@ -20,14 +20,14 @@ const StyledRadioGroup = styled.div`
 
 const Option = (props) => (
   <StyledOption>
-    <h4 className="tiny-header">{props.type} Padding</h4>
+    <h4 className='tiny-header'>{props.type} Padding</h4>
     <StyledRadioGroup>
       <StyledRadio htmlFor={props.type + "-0"}>
         <input
-          type="radio"
+          type='radio'
           id={props.type + "-0"}
           name={props.type}
-          value="0"
+          value='0'
           onChange={props.onChange}
           checked={props.value == 0 ? true : false}
         />
@@ -35,10 +35,10 @@ const Option = (props) => (
       </StyledRadio>
       <StyledRadio htmlFor={props.type + "-1"}>
         <input
-          type="radio"
+          type='radio'
           id={props.type + "-1"}
           name={props.type}
-          value="1"
+          value='1'
           onChange={props.onChange}
           checked={props.value == 1 ? true : false}
         />
@@ -46,10 +46,10 @@ const Option = (props) => (
       </StyledRadio>
       <StyledRadio htmlFor={props.type + "-2"}>
         <input
-          type="radio"
+          type='radio'
           id={props.type + "-2"}
           name={props.type}
-          value="2"
+          value='2'
           onChange={props.onChange}
           checked={props.value == 2 ? true : false}
         />
@@ -57,10 +57,10 @@ const Option = (props) => (
       </StyledRadio>
       <StyledRadio htmlFor={props.type + "-3"}>
         <input
-          type="radio"
+          type='radio'
           id={props.type + "-3"}
           name={props.type}
-          value="3"
+          value='3'
           onChange={props.onChange}
           checked={props.value == 3 ? true : false}
         />
@@ -68,10 +68,10 @@ const Option = (props) => (
       </StyledRadio>
       <StyledRadio htmlFor={props.type + "-4"}>
         <input
-          type="radio"
+          type='radio'
           id={props.type + "-4"}
           name={props.type}
-          value="4"
+          value='4'
           onChange={props.onChange}
           checked={props.value == 4 ? true : false}
         />
@@ -79,10 +79,10 @@ const Option = (props) => (
       </StyledRadio>
       <StyledRadio htmlFor={props.type + "-5"}>
         <input
-          type="radio"
+          type='radio'
           id={props.type + "-5"}
           name={props.type}
-          value="5"
+          value='5'
           onChange={props.onChange}
           checked={props.value == 5 ? true : false}
         />
@@ -90,10 +90,10 @@ const Option = (props) => (
       </StyledRadio>
       <StyledRadio htmlFor={props.type + "-6"}>
         <input
-          type="radio"
+          type='radio'
           id={props.type + "-6"}
           name={props.type}
-          value="6"
+          value='6'
           onChange={props.onChange}
           checked={props.value == 6 ? true : false}
         />
@@ -101,14 +101,25 @@ const Option = (props) => (
       </StyledRadio>
       <StyledRadio htmlFor={props.type + "-7"}>
         <input
-          type="radio"
+          type='radio'
           id={props.type + "-7"}
           name={props.type}
-          value="7"
+          value='7'
           onChange={props.onChange}
           checked={props.value == 7 ? true : false}
         />
         <span>7</span>
+      </StyledRadio>
+      <StyledRadio htmlFor={props.type + "-8"}>
+        <input
+          type='radio'
+          id={props.type + "-8"}
+          name={props.type}
+          value='8'
+          onChange={props.onChange}
+          checked={props.value == 8 ? true : false}
+        />
+        <span>8</span>
       </StyledRadio>
     </StyledRadioGroup>
   </StyledOption>

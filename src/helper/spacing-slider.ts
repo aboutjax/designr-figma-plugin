@@ -45,24 +45,28 @@ const PaddingHorizontalSlider = (nodes, msg) => {
       spacingName = "2";
       break;
     case "3":
-      spacing = 16;
+      spacing = 12;
       spacingName = "3";
       break;
     case "4":
-      spacing = 24;
+      spacing = 16;
       spacingName = "4";
       break;
     case "5":
-      spacing = 32;
+      spacing = 24;
       spacingName = "5";
       break;
     case "6":
-      spacing = 40;
+      spacing = 32;
       spacingName = "6";
       break;
     case "7":
-      spacing = 48;
+      spacing = 40;
       spacingName = "7";
+      break;
+    case "8":
+      spacing = 48;
+      spacingName = "8";
       break;
   }
 
@@ -107,24 +111,28 @@ const PaddingVerticalSlider = (nodes, msg) => {
       spacingName = "2";
       break;
     case "3":
-      spacing = 16;
+      spacing = 12;
       spacingName = "3";
       break;
     case "4":
-      spacing = 24;
+      spacing = 16;
       spacingName = "4";
       break;
     case "5":
-      spacing = 32;
+      spacing = 24;
       spacingName = "5";
       break;
     case "6":
-      spacing = 40;
+      spacing = 32;
       spacingName = "6";
       break;
     case "7":
-      spacing = 48;
+      spacing = 40;
       spacingName = "7";
+      break;
+    case "8":
+      spacing = 48;
+      spacingName = "8";
       break;
   }
 
@@ -164,24 +172,28 @@ const ItemSpacing = (nodes, msg) => {
       spacingName = "2";
       break;
     case "3":
-      spacing = 16;
+      spacing = 12;
       spacingName = "3";
       break;
     case "4":
-      spacing = 24;
+      spacing = 12;
       spacingName = "4";
       break;
     case "5":
-      spacing = 32;
+      spacing = 24;
       spacingName = "5";
       break;
     case "6":
-      spacing = 40;
+      spacing = 32;
       spacingName = "6";
       break;
     case "7":
-      spacing = 48;
+      spacing = 40;
       spacingName = "7";
+      break;
+    case "8":
+      spacing = 48;
+      spacingName = "8";
       break;
   }
 

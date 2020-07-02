@@ -40,18 +40,21 @@ const SetLayoutGrid = (nodes, msg) => {
         spacingHorizontal = 8;
         break;
       case "3":
-        spacingHorizontal = 16;
+        spacingHorizontal = 12;
         break;
       case "4":
-        spacingHorizontal = 24;
+        spacingHorizontal = 16;
         break;
       case "5":
-        spacingHorizontal = 32;
+        spacingHorizontal = 24;
         break;
       case "6":
-        spacingHorizontal = 40;
+        spacingHorizontal = 32;
         break;
       case "7":
+        spacingHorizontal = 40;
+        break;
+      case "8":
         spacingHorizontal = 48;
         break;
     }
@@ -70,18 +73,21 @@ const SetLayoutGrid = (nodes, msg) => {
         spacingVertical = 8;
         break;
       case "3":
-        spacingVertical = 16;
+        spacingVertical = 12;
         break;
       case "4":
-        spacingVertical = 24;
+        spacingVertical = 16;
         break;
       case "5":
-        spacingVertical = 32;
+        spacingVertical = 24;
         break;
       case "6":
-        spacingVertical = 40;
+        spacingVertical = 32;
         break;
       case "7":
+        spacingVertical = 40;
+        break;
+      case "8":
         spacingVertical = 48;
         break;
     }
