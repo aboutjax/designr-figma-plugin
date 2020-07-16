@@ -123,11 +123,9 @@ const swapEffects = async (node) => {
 const ThemeSwap = async (node) => {
   GetAllLocalPaintStyles();
   // do nothing below
-  if ("children" in node ) {
-
+  if ("children" in node) {
     for (const child of node.children) {
-      if(child.locked){
-
+      if (child.locked) {
       } else {
         ThemeSwap(child);
       }

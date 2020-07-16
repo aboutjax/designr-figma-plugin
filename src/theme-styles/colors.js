@@ -76,12 +76,16 @@ export const DarkUiColors = [
     styleKey: "15f5ffac3ec91b24089813439ffadd1f9994b29c",
   },
   {
-    name: "dark ui / divider / divider",
+    name: "dark ui / utility / divider",
     styleKey: "84ab0f298ea8fcd0b82ac89298ad51140ca7b75a",
   },
   {
-    name: "dark ui / divider / divider.strong",
+    name: "dark ui / utility / divider.strong",
     styleKey: "e9360a13f84514ee4b3977d4b6949f9bab63cb4f",
+  },
+  {
+    name: "dark ui / utility / overlay",
+    styleKey: "2b3836ded382e33a9704ef0f2f6b16fbfba2d3ce",
   },
   {
     name: "dark ui / 4DP / FTP",
@@ -179,12 +183,16 @@ export const LightUiColors = [
     styleKey: "903e5bf274139eeb9f4968a9ef08ec05eaf0b274",
   },
   {
-    name: "light ui / divider / divider",
+    name: "light ui / utility / divider",
     styleKey: "ee4ddce2e56ad47c4216d5827a283b943a794c78",
   },
   {
-    name: "light ui / divider / divider.strong",
+    name: "light ui / utility / divider.strong",
     styleKey: "17adbe4e27ba9b087f61af142deeb07fc0c01540",
+  },
+  {
+    name: "light ui / utility / overlay",
+    styleKey: "11a4778018c8bb236abe0d847c731a217e2d6d48",
   },
   {
     name: "light ui / 4DP / FTP",
