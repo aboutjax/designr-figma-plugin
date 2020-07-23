@@ -4,12 +4,20 @@ export const DarkUiColors = [
     styleKey: "2b792d84c9ddb5bb54b4e7ce000c595c79d748ca",
   },
   {
+    name: "dark ui / intentions / primary.main.50",
+    styleKey: "b371aab74522b01ab0ba870a9e26c3b7e6e48287",
+  },
+  {
     name: "dark ui / intentions / primary.dark",
     styleKey: "b43bd111250ce74d48cfd71ac00c1c1b558b02f0",
   },
   {
     name: "dark ui / intentions / error.main",
     styleKey: "767c2a9897062dee0d0f6300406f6e5585f684c7",
+  },
+  {
+    name: "dark ui / intentions / error.main.50",
+    styleKey: "76d68c9737130b313dfe6d6e18202e56dbfcdf0b",
   },
   {
     name: "dark ui / intentions / error.dark",
@@ -20,12 +28,20 @@ export const DarkUiColors = [
     styleKey: "894fbd335d8b0f6b1cee4ec5ac7a0479397a6b4c",
   },
   {
+    name: "dark ui / intentions / warning.main.50",
+    styleKey: "7e5c98270ac8d6d04d8b613e829e9e707fe42316",
+  },
+  {
     name: "dark ui / intentions / warning.dark",
     styleKey: "44b42a85052841387bc677c5719874cf0207cab5",
   },
   {
     name: "dark ui / intentions / success.main",
     styleKey: "2d44f3a0c60878cef5dbd10c59a417aa90c0c1bf",
+  },
+  {
+    name: "dark ui / intentions / success.main.50",
+    styleKey: "f814cbc5b3630a5e22c950566ae462723a84dc58",
   },
   {
     name: "dark ui / intentions / success.dark",
@@ -111,12 +127,20 @@ export const LightUiColors = [
     styleKey: "cf0c8e88eb65b8049feca60ac83e1de3d3ab6e8b",
   },
   {
+    name: "light ui / intentions / primary.main.50",
+    styleKey: "a3eeebad5f9f037ac93a95c978ac8cc8b7ccfa37",
+  },
+  {
     name: "light ui / intentions / primary.dark",
     styleKey: "da938698c9d223221d63c7c5501a9057a0d5f6fb",
   },
   {
     name: "light ui / intentions / error.main",
     styleKey: "798cb8f898ab2a508a7ba491d899011fda896577",
+  },
+  {
+    name: "light ui / intentions / error.main.50",
+    styleKey: "65100902e73192a3054f6abe58a7c4417a063984",
   },
   {
     name: "light ui / intentions / error.dark",
@@ -127,12 +151,20 @@ export const LightUiColors = [
     styleKey: "f27a60df8c162185ea2472a801b271ef662c0429",
   },
   {
+    name: "light ui / intentions / warning.main.50",
+    styleKey: "d6f094b4aadd33dc6420958297c4b88bc2949135",
+  },
+  {
     name: "light ui / intentions / warning.dark",
     styleKey: "615d6d5cac4855e981c8b942b986ee705b568b28",
   },
   {
     name: "light ui / intentions / success.main",
     styleKey: "e4aa41e8bf52f94ef5fce3669f510af3cb79c5a7",
+  },
+  {
+    name: "light ui / intentions / success.main.50",
+    styleKey: "93f8cb0ac5402c9286f20e94a2ea1d0b04a00d9f",
   },
   {
     name: "light ui / intentions / success.dark",

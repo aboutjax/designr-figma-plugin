@@ -171,7 +171,7 @@ const GetAllLocalPaintStyles = () => {
       rgba: rgba,
     });
 
-    console.log(allStylesArray);
+    console.table(allStylesArray);
   }
 };
 
