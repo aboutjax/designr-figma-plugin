@@ -142,7 +142,7 @@ export const maxWidthGrids = [
       b: 0,
       a: 0.20000000298023224,
     },
-    gutterSize: 960,
+    gutterSize: 1025,
     alignment: "STRETCH",
     count: 2,
     offset: 0,
@@ -159,7 +159,7 @@ export const maxWidthGrids = [
     gutterSize: 1,
     alignment: "CENTER",
     count: 1,
-    sectionSize: 960,
+    sectionSize: 1025,
   },
 ];
 
@@ -176,7 +176,7 @@ export const maxWidthLeftAlignedGrids = [
     gutterSize: 1,
     alignment: "MIN",
     count: 1,
-    sectionSize: 960,
+    sectionSize: 1025,
     offset: 0,
   },
 ];
