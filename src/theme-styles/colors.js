@@ -119,6 +119,22 @@ export const DarkUiColors = [
     name: "dark ui / 4DP / NM",
     styleKey: "82d50f3011d815902ed430df6d7345ecdf94761b",
   },
+  {
+    name: "dark ui / data / power",
+    styleKey: "73d228b465788c8ef2d16b9991512cb72c014043",
+  },
+  {
+    name: "dark ui / data / heart rate",
+    styleKey: "c3f3d0917340d9cb12db3448c267ac55da63d715",
+  },
+  {
+    name: "dark ui / data / cadence",
+    styleKey: "2fa915b2945e8a76a71438681137d28c61fe4214",
+  },
+  {
+    name: "dark ui / data / speed",
+    styleKey: "b979fcb104c296f78f40b63a9e74be17e2bbba53",
+  },
 ];
 
 export const LightUiColors = [
@@ -241,6 +257,22 @@ export const LightUiColors = [
   {
     name: "light ui / 4DP / NM",
     styleKey: "ddcbf68fa5c1eaa72077164272b7ae5b9e5e4ed7",
+  },
+  {
+    name: "light ui / data / power",
+    styleKey: "07834e0145e1c01546593462006128fa6a51d6ac",
+  },
+  {
+    name: "light ui / data / heart rate",
+    styleKey: "5a33b8b4a05f18996035425e2ba6af81791211cd",
+  },
+  {
+    name: "light ui / data / cadence",
+    styleKey: "7d28be638709626b59f280208696fb8130624c0a",
+  },
+  {
+    name: "light ui / data / speed",
+    styleKey: "e9eaf6b844fd1f6f17d6cb3e8e84b19ec5097adc",
   },
   {
     name: "utility / mask",
