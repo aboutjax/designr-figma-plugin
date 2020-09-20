@@ -31,6 +31,10 @@ export const LightUiEffects = [
     name: "light ui / shadow / high",
     styleKey: "c61253c38f6d0d9f3b302a77a3807e052e9c3f91",
   },
+  {
+    name: "light ui / shadow / paper",
+    styleKey: "69202fa8cc4f6cc0515cc08fdcc988459af28731",
+  },
 ];
 
 export const DarkUiEffects = [
@@ -65,5 +69,9 @@ export const DarkUiEffects = [
   {
     name: "dark ui / shadow / high",
     styleKey: "209b451e4f68f5bf3ade24ef36a10a609cdae239",
+  },
+  {
+    name: "dark ui / shadow / paper",
+    styleKey: "a89abbe6d64f824f62ebb1f54f6f28a910490195",
   },
 ];
