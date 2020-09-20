@@ -46,6 +46,7 @@ Adjust auto layout spacings with spacing defined from our tokens. Visible when y
 **Note** There’s a weird Figma glitch: After you change a slider value, your cursor needs to go back to Figma canvas to update the frame to the most up to date value. Not sure why, it’s a weird Figma plugin issue I couldn’t fix.
 
 ## Layout Grids shortcut
+
 ![Layout Grids shortcut](./assets/grids-overview.png)
 **What?** A shortcut for applying layout grids based on our spacing values. Inspired by Google Chrome's box model visualisation, this should look familar.
 
@@ -58,4 +59,3 @@ If you want to contribute, run this plugin locally on your machine and watch for
 1. `npm install` to install all the dependencies
 2. `npx webpack` to watch the `./src` folder and compile any code changes.
 3. To see the changes after each compile, bring the Figma desktop app to the foreground, and use `command + option + p` shortcut which tells Figma to re-run the last plugin.
-

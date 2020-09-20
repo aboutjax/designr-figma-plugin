@@ -84,11 +84,11 @@ export const DarkUiColors = [
     styleKey: "214ac4df796b51c0f426028d0f4268efa6ee3685",
   },
   {
-    name: "dark ui / background / background.default",
+    name: "dark ui / background / background.paper",
     styleKey: "2f060e7422a8ad17a037a250d368cf671adc0468",
   },
   {
-    name: "dark ui / background / background.paper",
+    name: "dark ui / background / background.default",
     styleKey: "15f5ffac3ec91b24089813439ffadd1f9994b29c",
   },
   {
@@ -223,11 +223,11 @@ export const LightUiColors = [
     styleKey: "73b15e3a79eeea757283a44cf71131305cba2399",
   },
   {
-    name: "light ui / background / background.default",
+    name: "light ui / background / background.paper",
     styleKey: "23e94fceed9accbda4db9c672c43d21b4d286e4c",
   },
   {
-    name: "light ui / background / background.paper",
+    name: "light ui / background / background.default",
     styleKey: "903e5bf274139eeb9f4968a9ef08ec05eaf0b274",
   },
   {
