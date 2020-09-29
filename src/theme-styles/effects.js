@@ -24,16 +24,16 @@ export const LightUiEffects = [
     styleKey: "a6447b7210901bca45b98fe918ac55540fa8354e",
   },
   {
-    name: "light ui / shadow / low",
+    name: "light ui / shadow / elevation 4",
+    styleKey: "69202fa8cc4f6cc0515cc08fdcc988459af28731",
+  },
+  {
+    name: "light ui / shadow / elevation 9",
     styleKey: "8ccea9d523cf9dc13fee68f392f3f9cc3187a457",
   },
   {
-    name: "light ui / shadow / high",
+    name: "light ui / shadow / elevation 14",
     styleKey: "c61253c38f6d0d9f3b302a77a3807e052e9c3f91",
-  },
-  {
-    name: "light ui / shadow / paper",
-    styleKey: "69202fa8cc4f6cc0515cc08fdcc988459af28731",
   },
 ];
 
@@ -63,15 +63,15 @@ export const DarkUiEffects = [
     styleKey: "fc06b8e7032fc9b1fa07af5e39293df2150ff4dc",
   },
   {
-    name: "dark ui / shadow / low",
+    name: "dark ui / shadow / elevation 4",
+    styleKey: "a89abbe6d64f824f62ebb1f54f6f28a910490195",
+  },
+  {
+    name: "dark ui / shadow / elevation 9",
     styleKey: "98761904bcc9d38c81ee23e7b432d8c97e29f0c1",
   },
   {
-    name: "dark ui / shadow / high",
+    name: "dark ui / shadow / elevation 14",
     styleKey: "209b451e4f68f5bf3ade24ef36a10a609cdae239",
-  },
-  {
-    name: "dark ui / shadow / paper",
-    styleKey: "a89abbe6d64f824f62ebb1f54f6f28a910490195",
   },
 ];
