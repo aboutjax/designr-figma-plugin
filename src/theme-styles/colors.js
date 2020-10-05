@@ -135,6 +135,26 @@ export const DarkUiColors = [
     name: "dark ui / data / speed",
     styleKey: "b979fcb104c296f78f40b63a9e74be17e2bbba53",
   },
+  {
+    name: "dark ui / compliance / status.completed",
+    styleKey: "8091e7ec107056784644628db1736bcfac62fed1",
+  },
+  {
+    name: "dark ui / compliance / status.incomplete",
+    styleKey: "14ec4bdb4c4b698cfb7c548f7382b748e25020d2",
+  },
+  {
+    name: "dark ui / compliance / status.missed",
+    styleKey: "65795aaeadace278c5f8600c30322b927136c023",
+  },
+  {
+    name: "dark ui / compliance / status.adhocComplete",
+    styleKey: "2b3b297aef3975cf56b90ecbad30f9551cb8b54c",
+  },
+  {
+    name: "dark ui / compliance / status.scheduled",
+    styleKey: "bcc3269ebb317ebd45d494dfdce89cb92cc8caf4",
+  },
 ];
 
 export const LightUiColors = [
@@ -273,6 +293,26 @@ export const LightUiColors = [
   {
     name: "light ui / data / speed",
     styleKey: "e9eaf6b844fd1f6f17d6cb3e8e84b19ec5097adc",
+  },
+  {
+    name: "light ui / compliance / status.completed",
+    styleKey: "93b35a3770d89e1ffd20b15da97883803bb14dc8",
+  },
+  {
+    name: "light ui / compliance / status.incomplete",
+    styleKey: "d2411aba745cf6ca62d6771187729384be22759a",
+  },
+  {
+    name: "light ui / compliance / status.missed",
+    styleKey: "a3ee62b8055cc6d22ddaaa90a37bf6f9efd3b9a4",
+  },
+  {
+    name: "light ui / compliance / status.adhocComplete",
+    styleKey: "2c4cc4c0b2ec89253fb531e1c9cea3fce614c3a3",
+  },
+  {
+    name: "light ui / compliance / status.scheduled",
+    styleKey: "bc983d5dc8ebf3141ca4e365a0ca40b409c80a46",
   },
   {
     name: "utility / mask",
