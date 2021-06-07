@@ -140,7 +140,7 @@ export const LightUiColors = [
     styleKey: "93b35a3770d89e1ffd20b15da97883803bb14dc8",
   },
   {
-    name: "light ui/compliance/incompleted",
+    name: "light ui/compliance/incomplete",
     styleKey: "d2411aba745cf6ca62d6771187729384be22759a",
   },
   {
@@ -226,12 +226,12 @@ export const LightUiColors = [
   },
 
   {
-    name: "light ui/interaction/compliance/incompleted.hover",
+    name: "light ui/interaction/compliance/incomplete.hover",
     styleKey: "1fd88622f6dbc00847baec79750a8f5adaa3dfb6",
   },
 
   {
-    name: "light ui/interaction/compliance/incompleted.pressed",
+    name: "light ui/interaction/compliance/incomplete.pressed",
     styleKey: "1ac86b281af7c88d4cfac6d0afb5cb2a98a16a3d",
   },
 
@@ -408,7 +408,7 @@ export const DarkUiColors = [
     styleKey: "8091e7ec107056784644628db1736bcfac62fed1",
   },
   {
-    name: "dark ui/compliance/incompleted",
+    name: "dark ui/compliance/incomplete",
     styleKey: "14ec4bdb4c4b698cfb7c548f7382b748e25020d2",
   },
   {
@@ -494,12 +494,12 @@ export const DarkUiColors = [
   },
 
   {
-    name: "dark ui/interaction/compliance/incompleted.hover",
+    name: "dark ui/interaction/compliance/incomplete.hover",
     styleKey: "1e19777449d66f6de184a5e61020cbba422d65e9",
   },
 
   {
-    name: "dark ui/interaction/compliance/incompleted.pressed",
+    name: "dark ui/interaction/compliance/incomplete.pressed",
     styleKey: "e42a407e1800e91a833ffe78cd23384e9a694260",
   },
 
