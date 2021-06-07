@@ -11,8 +11,8 @@ const swapFill = async (node) => {
 
   if (nodeFillPaintIsLightMode) {
     swappedNodeFillName = nodeFillPaintName.replace(
-      "light ui / ",
-      "dark ui / "
+      "light ui/",
+      "dark ui/"
     );
 
     for (const item of DarkUiColors) {
@@ -24,8 +24,8 @@ const swapFill = async (node) => {
     }
   } else {
     swappedNodeFillName = nodeFillPaintName.replace(
-      "dark ui / ",
-      "light ui / "
+      "dark ui/",
+      "light ui/"
     );
 
     for (const item of LightUiColors) {
@@ -50,8 +50,8 @@ const swapStroke = async (node) => {
 
   if (nodeStrokePaintIsLightMode) {
     swappedNodeStrokeName = nodeStrokePaintName.replace(
-      "light ui / ",
-      "dark ui / "
+      "light ui/",
+      "dark ui/"
     );
     for (const item of DarkUiColors) {
       if (item.name === swappedNodeStrokeName) {
@@ -64,8 +64,8 @@ const swapStroke = async (node) => {
     }
   } else {
     swappedNodeStrokeName = nodeStrokePaintName.replace(
-      "dark ui / ",
-      "light ui / "
+      "dark ui/",
+      "light ui/"
     );
     for (const item of LightUiColors) {
       if (item.name === swappedNodeStrokeName) {
@@ -90,8 +90,8 @@ const swapEffects = async (node) => {
 
   if (nodeEffectStyleNameIsLight) {
     swappedNodeEffectName = nodeEffectStyleName.replace(
-      "light ui / ",
-      "dark ui / "
+      "light ui/",
+      "dark ui/"
     );
     for (const item of DarkUiEffects) {
       if (item.name === swappedNodeEffectName) {
@@ -104,8 +104,8 @@ const swapEffects = async (node) => {
     }
   } else {
     swappedNodeEffectName = nodeEffectStyleName.replace(
-      "dark ui / ",
-      "light ui / "
+      "dark ui/",
+      "light ui/"
     );
     for (const item of LightUiEffects) {
       if (item.name === swappedNodeEffectName) {
@@ -121,7 +121,7 @@ const swapEffects = async (node) => {
 
 // Theme Swap
 const ThemeSwap = async (node) => {
-  // GetAllLocalPaintStyles();
+  GetAllLocalPaintStyles();
   // do nothing below
   if ("children" in node) {
     for (const child of node.children) {
