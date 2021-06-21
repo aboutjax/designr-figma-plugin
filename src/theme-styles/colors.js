@@ -12,6 +12,10 @@ export const LightUiColors = [
     styleKey: "da938698c9d223221d63c7c5501a9057a0d5f6fb",
   },
   {
+    name: "light ui/intentions/primary.light",
+    styleKey: "0e2abe38c19501bedba067074b9ff59ca3a4914b",
+  },
+  {
     name: "light ui/intentions/error.main",
     styleKey: "798cb8f898ab2a508a7ba491d899011fda896577",
   },
@@ -22,6 +26,10 @@ export const LightUiColors = [
   {
     name: "light ui/intentions/error.dark",
     styleKey: "12776456e68adf4ab5e391797c3c84e92b0f86c2",
+  },
+  {
+    name: "light ui/intentions/error.light",
+    styleKey: "d35dabc3ee7f5be18ac0d2aeb74c72baaa8bbca7",
   },
   {
     name: "light ui/intentions/warning.main",
@@ -36,6 +44,10 @@ export const LightUiColors = [
     styleKey: "615d6d5cac4855e981c8b942b986ee705b568b28",
   },
   {
+    name: "light ui/intentions/warning.light",
+    styleKey: "d4c30135f4c12c7df4442222116a9eb7cebf65be",
+  },
+  {
     name: "light ui/intentions/success.main",
     styleKey: "e4aa41e8bf52f94ef5fce3669f510af3cb79c5a7",
   },
@@ -46,6 +58,10 @@ export const LightUiColors = [
   {
     name: "light ui/intentions/success.dark",
     styleKey: "d9883b53c2539bf1e1068205fe1d059d58315e4f",
+  },
+  {
+    name: "light ui/intentions/success.light",
+    styleKey: "527f68ce7ccbad814564f47f88bdeada80775377",
   },
   {
     name: "light ui/typography/text.primary",
@@ -80,6 +96,22 @@ export const LightUiColors = [
     styleKey: "f81a1f7487031698d15c2394e4c74fcc9eccc299",
   },
   {
+    name: "light ui/typography/text.contrastText.compliant",
+    styleKey: "ca8e869592bd0c3b96806bc1240c5f4bdff38b1d",
+  },
+  {
+    name: "light ui/typography/text.contrastText.nonCompliant",
+    styleKey: "6cd62889c6bea67fa6e2f84fa5814f1f217de3b8",
+  },
+  {
+    name: "light ui/typography/text.contrastText.missed",
+    styleKey: "72d59c899182b464713078ae8cbca6c7c45917c7",
+  },
+  {
+    name: "light ui/typography/text.contrastText.unpaired",
+    styleKey: "d5e120701a364379acd507538d144c2a82ac2143",
+  },
+  {
     name: "light ui/buttons/action.disabledBackground",
     styleKey: "73b15e3a79eeea757283a44cf71131305cba2399",
   },
@@ -104,20 +136,20 @@ export const LightUiColors = [
     styleKey: "11a4778018c8bb236abe0d847c731a217e2d6d48",
   },
   {
-    name: "light ui/4DP/FTP",
-    styleKey: "224e4912027be9f75685fd40b2528ba9f34fe958",
-  },
-  {
-    name: "light ui/4DP/MAP",
-    styleKey: "aaa3a531a124fa854e09d398f98fb47b989a8a72",
+    name: "light ui/4DP/NM",
+    styleKey: "ddcbf68fa5c1eaa72077164272b7ae5b9e5e4ed7",
   },
   {
     name: "light ui/4DP/AC",
     styleKey: "220d3493747cd8d8bdc5d4a0e7965c36a3c52349",
   },
   {
-    name: "light ui/4DP/NM",
-    styleKey: "ddcbf68fa5c1eaa72077164272b7ae5b9e5e4ed7",
+    name: "light ui/4DP/MAP",
+    styleKey: "aaa3a531a124fa854e09d398f98fb47b989a8a72",
+  },
+  {
+    name: "light ui/4DP/FTP",
+    styleKey: "224e4912027be9f75685fd40b2528ba9f34fe958",
   },
   {
     name: "light ui/data/power",
@@ -136,133 +168,72 @@ export const LightUiColors = [
     styleKey: "e9eaf6b844fd1f6f17d6cb3e8e84b19ec5097adc",
   },
   {
-    name: "light ui/compliance/completed",
-    styleKey: "93b35a3770d89e1ffd20b15da97883803bb14dc8",
+    name: "light ui/compliance/compliant",
+    styleKey: "b5807b72ac4c76852140a9ca68b4698567053f11",
   },
   {
-    name: "light ui/compliance/incomplete",
-    styleKey: "d2411aba745cf6ca62d6771187729384be22759a",
+    name: "light ui/compliance/nonCompliant",
+    styleKey: "8f9d1bf5b0d1ce3753b10e8cde620aeb6ccaff11",
   },
   {
     name: "light ui/compliance/missed",
-    styleKey: "a3ee62b8055cc6d22ddaaa90a37bf6f9efd3b9a4",
+    styleKey: "d44465ff68b5fed196d2170570d7285f52015b26",
   },
   {
-    name: "light ui/compliance/adhocCompleted",
-    styleKey: "2c4cc4c0b2ec89253fb531e1c9cea3fce614c3a3",
+    name: "light ui/compliance/unpaired",
+    styleKey: "18a773bd3c236db6f7656d0683bbde8b4adcef26",
   },
   {
     name: "light ui/compliance/scheduled",
-    styleKey: "bc983d5dc8ebf3141ca4e365a0ca40b409c80a46",
+    styleKey: "6da88c50bdb2c4a6cde8acdceb4d94f7e935dcd0",
   },
   {
     name: "light ui/interaction/intentions/primary.main.hover",
     styleKey: "3144a9afb54196558c530ab736aac11421fc4254",
   },
-
   {
     name: "light ui/interaction/intentions/primary.main.pressed",
     styleKey: "4ebe0e209e36b5b5bfce04152e9f14928542badb",
   },
-
   {
     name: "light ui/interaction/intentions/error.main.hover",
     styleKey: "da51ad237fb19b106b88f5a29d98937addc3a0b0",
   },
-
   {
     name: "light ui/interaction/intentions/error.main.pressed",
     styleKey: "78fbb981e2e5e8b37fd3e6ce2a9e5a88b924ed78",
   },
-
   {
     name: "light ui/interaction/intentions/warning.main.hover",
     styleKey: "a682cb733cde42333d907e7a4b0ac9ce8ef22642",
   },
-
   {
     name: "light ui/interaction/intentions/warning.main.pressed",
     styleKey: "f211b80adb679bc1b20860b7529f904f30982780",
   },
-
   {
     name: "light ui/interaction/intentions/success.main.hover",
     styleKey: "3ba1bae3cc01fb24f53a4186ae3459a77494fe6a",
   },
-
   {
     name: "light ui/interaction/intentions/success.main.pressed",
     styleKey: "7c6bcfd1da9fbbf6c5e2bded6958c70ef5af8d0f",
   },
-
   {
     name: "light ui/interaction/background/default.hover",
     styleKey: "764e581598dde2af35446081fc23beaf1d7d42e1",
   },
-
   {
     name: "light ui/interaction/background/default.pressed",
     styleKey: "50a73ebcb0612ad5d172beab2279c9d5330bc10a",
   },
-
   {
     name: "light ui/interaction/background/paper.hover",
     styleKey: "22e3d02d5f8b1d92bea3ca0ccaedebc834d74d84",
   },
-
   {
     name: "light ui/interaction/background/paper.pressed",
     styleKey: "c4cfe1f373043ecb0fcaccbf2280964b53237b00",
-  },
-
-  {
-    name: "light ui/interaction/compliance/completed.hover",
-    styleKey: "4476637de6d3d497e80c9624fcbff5df90f8df73",
-  },
-
-  {
-    name: "light ui/interaction/compliance/completed.pressed",
-    styleKey: "bbbbb05627197b5f2f520c6b8109053b6b66c4f9",
-  },
-
-  {
-    name: "light ui/interaction/compliance/incomplete.hover",
-    styleKey: "1fd88622f6dbc00847baec79750a8f5adaa3dfb6",
-  },
-
-  {
-    name: "light ui/interaction/compliance/incomplete.pressed",
-    styleKey: "1ac86b281af7c88d4cfac6d0afb5cb2a98a16a3d",
-  },
-
-  {
-    name: "light ui/interaction/compliance/missed.hover",
-    styleKey: "779d40c17bb0a796af56afc84dc866a584288dde",
-  },
-
-  {
-    name: "light ui/interaction/compliance/missed.pressed",
-    styleKey: "3ce63883106f28403ff6e934b43c9aa2dbe9df02",
-  },
-
-  {
-    name: "light ui/interaction/compliance/adhocCompleted.hover",
-    styleKey: "9d8a43e03a2b0a8894f803c5a276c98195fd70b1",
-  },
-
-  {
-    name: "light ui/interaction/compliance/adhocCompleted.pressed",
-    styleKey: "393c205de27a88f62a10465497f12de1cc1c19d9",
-  },
-
-  {
-    name: "light ui/interaction/compliance/scheduled.hover",
-    styleKey: "b5ff136fb53b17f6959eaf3b82d878d411b1a989",
-  },
-
-  {
-    name: "light ui/interaction/compliance/scheduled.pressed",
-    styleKey: "0cc78f36649f45dc7181a9b7646aaa3179704160",
   },
 ];
 
@@ -280,6 +251,10 @@ export const DarkUiColors = [
     styleKey: "b43bd111250ce74d48cfd71ac00c1c1b558b02f0",
   },
   {
+    name: "dark ui/intentions/primary.light",
+    styleKey: "f377e775c84f27825f8ac801e78d8708c05f8df1",
+  },
+  {
     name: "dark ui/intentions/error.main",
     styleKey: "767c2a9897062dee0d0f6300406f6e5585f684c7",
   },
@@ -290,6 +265,10 @@ export const DarkUiColors = [
   {
     name: "dark ui/intentions/error.dark",
     styleKey: "34a9a344c25416d1a7ea6d6732db13e7bc6cc397",
+  },
+  {
+    name: "dark ui/intentions/error.light",
+    styleKey: "957620e54d15afce55314ca589c7a1e93435a201",
   },
   {
     name: "dark ui/intentions/warning.main",
@@ -304,6 +283,10 @@ export const DarkUiColors = [
     styleKey: "44b42a85052841387bc677c5719874cf0207cab5",
   },
   {
+    name: "dark ui/intentions/warning.light",
+    styleKey: "acc88b7919792a2132c35ded6004d1df03ea7bbb",
+  },
+  {
     name: "dark ui/intentions/success.main",
     styleKey: "2d44f3a0c60878cef5dbd10c59a417aa90c0c1bf",
   },
@@ -314,6 +297,10 @@ export const DarkUiColors = [
   {
     name: "dark ui/intentions/success.dark",
     styleKey: "43222791f7d5afde8b84bdb7a7c75a6a8cc9d334",
+  },
+  {
+    name: "dark ui/intentions/success.light",
+    styleKey: "5363c170923adfe09332c2ab95f46856fd56b72e",
   },
   {
     name: "dark ui/typography/text.primary",
@@ -348,6 +335,22 @@ export const DarkUiColors = [
     styleKey: "7f7a4ee1fbcb6529e6fb564a0f488188b0dc2b37",
   },
   {
+    name: "dark ui/typography/text.contrastText.compliant",
+    styleKey: "bfb1ca68ae0a73a054390b6af0a56c91271b8852",
+  },
+  {
+    name: "dark ui/typography/text.contrastText.nonCompliant",
+    styleKey: "c2cd21f55e232e72655a27dcf5de06d0da44bf4e",
+  },
+  {
+    name: "dark ui/typography/text.contrastText.missed",
+    styleKey: "7b5f8d319715104bb3d4a107788ec5bfa6ea31d4",
+  },
+  {
+    name: "dark ui/typography/text.contrastText.unpaired",
+    styleKey: "f4569ec5a14b6d52634077d1c88d3de7d47a18ec",
+  },
+  {
     name: "dark ui/buttons/action.disabledBackground",
     styleKey: "214ac4df796b51c0f426028d0f4268efa6ee3685",
   },
@@ -372,20 +375,20 @@ export const DarkUiColors = [
     styleKey: "2b3836ded382e33a9704ef0f2f6b16fbfba2d3ce",
   },
   {
-    name: "dark ui/4DP/FTP",
-    styleKey: "7bb028ff7d873486678b7c6764fc50f39e571eb6",
-  },
-  {
-    name: "dark ui/4DP/MAP",
-    styleKey: "df57febc8ef77dd2c35be2d1b940afb8331668b4",
+    name: "dark ui/4DP/NM",
+    styleKey: "82d50f3011d815902ed430df6d7345ecdf94761b",
   },
   {
     name: "dark ui/4DP/AC",
     styleKey: "e8193abfd2f715e48b9cc7ce4bc6b95c897aa04d",
   },
   {
-    name: "dark ui/4DP/NM",
-    styleKey: "82d50f3011d815902ed430df6d7345ecdf94761b",
+    name: "dark ui/4DP/MAP",
+    styleKey: "df57febc8ef77dd2c35be2d1b940afb8331668b4",
+  },
+  {
+    name: "dark ui/4DP/FTP",
+    styleKey: "7bb028ff7d873486678b7c6764fc50f39e571eb6",
   },
   {
     name: "dark ui/data/power",
@@ -404,11 +407,11 @@ export const DarkUiColors = [
     styleKey: "b979fcb104c296f78f40b63a9e74be17e2bbba53",
   },
   {
-    name: "dark ui/compliance/completed",
+    name: "dark ui/compliance/compliant",
     styleKey: "8091e7ec107056784644628db1736bcfac62fed1",
   },
   {
-    name: "dark ui/compliance/incomplete",
+    name: "dark ui/compliance/nonCompliant",
     styleKey: "14ec4bdb4c4b698cfb7c548f7382b748e25020d2",
   },
   {
@@ -416,7 +419,7 @@ export const DarkUiColors = [
     styleKey: "65795aaeadace278c5f8600c30322b927136c023",
   },
   {
-    name: "dark ui/compliance/adhocCompleted",
+    name: "dark ui/compliance/unpaired",
     styleKey: "2b3b297aef3975cf56b90ecbad30f9551cb8b54c",
   },
   {
@@ -427,109 +430,48 @@ export const DarkUiColors = [
     name: "dark ui/interaction/intentions/primary.main.hover",
     styleKey: "99687d1365def72e70d41b03e536f70c1d33d956",
   },
-
   {
     name: "dark ui/interaction/intentions/primary.main.pressed",
     styleKey: "dab9928da4b1a98b5e435611f01b34bc51fec18a",
   },
-
   {
     name: "dark ui/interaction/intentions/error.main.hover",
     styleKey: "4bf67774e600f12a09a810dd3dd4133634d1af92",
   },
-
   {
     name: "dark ui/interaction/intentions/error.main.pressed",
     styleKey: "112dda92cd515c320ed92cf23c5bda582e3b19c1",
   },
-
   {
     name: "dark ui/interaction/intentions/warning.main.pressed",
     styleKey: "8a666ecef0121d5479e8cf107e697d3e76d3fe6d",
   },
-
   {
     name: "dark ui/interaction/intentions/warning.main.hover",
     styleKey: "d33407d6805f3dbabf34b97878e942e10582fcea",
   },
-
   {
     name: "dark ui/interaction/intentions/success.main.hover",
     styleKey: "a4f1ba66f12a699f4c68acdbea7fd0a9613a45de",
   },
-
   {
     name: "dark ui/interaction/intentions/success.main.pressed",
     styleKey: "0062d53341773222ffd614eab148e529219579f2",
   },
-
   {
     name: "dark ui/interaction/background/default.hover",
     styleKey: "d751009f68affab8e170a7d4001356b1772f0e50",
   },
-
   {
     name: "dark ui/interaction/background/default.pressed",
     styleKey: "cd047796e952873d8fc8998586c130e416d30631",
   },
-
   {
     name: "dark ui/interaction/background/paper.hover",
     styleKey: "b330badc6cea02b9012a3f581df6f00f1ff48777",
   },
-
   {
     name: "dark ui/interaction/background/paper.pressed",
     styleKey: "65c58c7b03a8381a12983bcd0adea1ee184613a0",
-  },
-
-  {
-    name: "dark ui/interaction/compliance/completed.hover",
-    styleKey: "3b8503abeb4efb94cdfb480451f3e600cbb32568",
-  },
-
-  {
-    name: "dark ui/interaction/compliance/completed.pressed",
-    styleKey: "e0644891c1d5128d3cdd25768b650e171f6d6925",
-  },
-
-  {
-    name: "dark ui/interaction/compliance/incomplete.hover",
-    styleKey: "1e19777449d66f6de184a5e61020cbba422d65e9",
-  },
-
-  {
-    name: "dark ui/interaction/compliance/incomplete.pressed",
-    styleKey: "e42a407e1800e91a833ffe78cd23384e9a694260",
-  },
-
-  {
-    name: "dark ui/interaction/compliance/missed.hover",
-    styleKey: "24fbaa585af2c5a93c4f9fac544ef35df7a9c97b",
-  },
-
-  {
-    name: "dark ui/interaction/compliance/missed.pressed",
-    styleKey: "56a5b777cce6206318b93bdd6a7f622b0bda5686",
-  },
-
-  {
-    name: "dark ui/interaction/compliance/adhocCompleted.hover",
-    styleKey: "4e5448588518dea5fb5183e3ff60edb845478e94",
-  },
-
-  {
-    name: "dark ui/interaction/compliance/adhocCompleted.pressed",
-    styleKey: "6882cf6522ed99d2be4eab2d0ee523c462e45817",
-  },
-
-  {
-    name: "dark ui/interaction/compliance/scheduled.hover",
-    styleKey: "30d109353d4063f37ce97c7a75f906c98a5c118f",
-  },
-
-  {
-    name: "dark ui/interaction/compliance/scheduled.pressed",
-    styleKey: "b2b3e45c9b639c07c494c296c7d06cf6afd7bacd",
   },
 ];
