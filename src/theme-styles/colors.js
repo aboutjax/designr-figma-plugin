@@ -235,6 +235,10 @@ export const LightUiColors = [
     name: "light ui/interaction/background/paper.pressed",
     styleKey: "c4cfe1f373043ecb0fcaccbf2280964b53237b00",
   },
+  {
+    name: "light ui/special use/premium",
+    styleKey: "78cf4018e5bc9fad67698c9a9a3c65fde8f127f6",
+  },
 ];
 
 export const DarkUiColors = [
@@ -473,5 +477,9 @@ export const DarkUiColors = [
   {
     name: "dark ui/interaction/background/paper.pressed",
     styleKey: "65c58c7b03a8381a12983bcd0adea1ee184613a0",
+  },
+  {
+    name: "dark ui/special use/premium",
+    styleKey: "3f8d2d81a0abb5bc0b8a4d5212f48c113a98f10e",
   },
 ];
