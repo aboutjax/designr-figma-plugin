@@ -169,7 +169,7 @@ const GetAllLocalPaintStyles = () => {
     allStylesArray.push({
       name: paintStyle.name,
       styleKey: paintStyle.key,
-      rgba: rgba,
+      // rgba: rgba,
     });
 
     console.log(allStylesArray);

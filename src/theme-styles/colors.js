@@ -108,8 +108,8 @@ export const LightUiColors = [
     styleKey: "72d59c899182b464713078ae8cbca6c7c45917c7",
   },
   {
-    name: "light ui/typography/text.contrastText.unpaired",
-    styleKey: "d5e120701a364379acd507538d144c2a82ac2143",
+    name: "light ui/typography/text.contrastText.premium",
+    styleKey: "1f0638ad6772a5b5055b22582ca4e7cfcf400869",
   },
   {
     name: "light ui/buttons/action.disabledBackground",
@@ -236,6 +236,14 @@ export const LightUiColors = [
     styleKey: "c4cfe1f373043ecb0fcaccbf2280964b53237b00",
   },
   {
+    name: "light ui/interaction/special use/premium.hover",
+    styleKey: "9a612a7f99acaeaa882508b2546ce16ba0e2dfef",
+  },
+  {
+    name: "light ui/interaction/special use/premium.pressed",
+    styleKey: "f5c24f44ad40b90bfe1a42faf1943ac1a0ba0ee1",
+  },
+  {
     name: "light ui/special use/premium",
     styleKey: "78cf4018e5bc9fad67698c9a9a3c65fde8f127f6",
   },
@@ -351,8 +359,8 @@ export const DarkUiColors = [
     styleKey: "7b5f8d319715104bb3d4a107788ec5bfa6ea31d4",
   },
   {
-    name: "dark ui/typography/text.contrastText.unpaired",
-    styleKey: "f4569ec5a14b6d52634077d1c88d3de7d47a18ec",
+    name: "dark ui/typography/text.contrastText.premium",
+    styleKey: "9911089620bad2ac7f7d95e956d99e4936bbcaf8",
   },
   {
     name: "dark ui/buttons/action.disabledBackground",
@@ -477,6 +485,14 @@ export const DarkUiColors = [
   {
     name: "dark ui/interaction/background/paper.pressed",
     styleKey: "65c58c7b03a8381a12983bcd0adea1ee184613a0",
+  },
+  {
+    name: "dark ui/interaction/special use/premium.hover",
+    styleKey: "48c8bc314df223e1a8de4e10d0099cd971093d1a",
+  },
+  {
+    name: "dark ui/interaction/special use/premium.pressed",
+    styleKey: "5def46e9e443aa9adda425be14ca4aaab1fcd109",
   },
   {
     name: "dark ui/special use/premium",
