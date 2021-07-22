@@ -151,13 +151,13 @@ const App = () => {
 
   return (
     <div className="container">
-      <div className="section">
+      {/* <div className="section">
         <h4>Colours</h4>
         <p>Check stray colors for the selected frame.</p>
         <button className="button" id="check-colors" onClick={onColorCheck}>
           Check Colors
         </button>
-      </div>
+      </div> */}
       <div className="section">
         <h4>Light & Dark Themes</h4>
         <p>Convert frame to opposite theme.</p>
@@ -179,7 +179,7 @@ const App = () => {
         />
       </div>
 
-      {selected && layoutMode !== "NONE" && type == "FRAME" ? (
+      {/* {selected && layoutMode !== "NONE" && type == "FRAME" ? (
         <AutoLayoutSpacingSection
           layoutMode={layoutMode}
           horizontalPadding={horizontalPadding}
@@ -192,7 +192,7 @@ const App = () => {
         />
       ) : (
         ""
-      )}
+      )} */}
     </div>
   );
 };
@@ -231,7 +231,8 @@ const AutoLayoutSpacingSection = (props) => (
     <button
       className="button"
       id="check-spacing"
-      onClick={props.onSpacingCheck}>
+      onClick={props.onSpacingCheck}
+    >
       Update from Name
     </button>
   </div>
