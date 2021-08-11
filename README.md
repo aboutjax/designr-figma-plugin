@@ -4,7 +4,7 @@
 
 This is a figma plugin that helps us achieve consistent color & spacing.
 
-# 🎁 Installationd
+# 🎁 Installation
 
 1. Go to [latest release](https://github.com/aboutjax/designr-figma-plugin/releases/latest) and download the source code.
 2. Unzip the `designr-figma-plugin.zip` file and place the unzipped folder in a safe directory anywhere on your machine.
