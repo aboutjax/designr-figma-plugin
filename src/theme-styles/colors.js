@@ -112,6 +112,10 @@ export const LightUiColors = [
     styleKey: "1f0638ad6772a5b5055b22582ca4e7cfcf400869",
   },
   {
+    name: "light ui/typography/text.contrastText.message",
+    styleKey: "83be2d1d6f50b396264710e07be1001867e49825",
+  },
+  {
     name: "light ui/buttons/action.disabledBackground",
     styleKey: "73b15e3a79eeea757283a44cf71131305cba2399",
   },
@@ -365,6 +369,10 @@ export const DarkUiColors = [
   {
     name: "dark ui/typography/text.contrastText.premium",
     styleKey: "9911089620bad2ac7f7d95e956d99e4936bbcaf8",
+  },
+  {
+    name: "dark ui/typography/text.contrastText.message",
+    styleKey: "d098a757f54437897865872a16ffeb9b99ab95ae",
   },
   {
     name: "dark ui/buttons/action.disabledBackground",
