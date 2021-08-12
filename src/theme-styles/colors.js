@@ -247,6 +247,10 @@ export const LightUiColors = [
     name: "light ui/special use/premium",
     styleKey: "78cf4018e5bc9fad67698c9a9a3c65fde8f127f6",
   },
+  {
+    name: "light ui/special use/message",
+    styleKey: "c85a9b846349a3a7d3eed358acbc32c2715c982d",
+  },
 ];
 
 export const DarkUiColors = [
@@ -497,5 +501,9 @@ export const DarkUiColors = [
   {
     name: "dark ui/special use/premium",
     styleKey: "3f8d2d81a0abb5bc0b8a4d5212f48c113a98f10e",
+  },
+  {
+    name: "dark ui/special use/message",
+    styleKey: "9b62610976846cb3933d20dd52ff668454678af7",
   },
 ];
