@@ -151,13 +151,6 @@ const App = () => {
 
   return (
     <div className="container">
-      {/* <div className="section">
-        <h4>Colours</h4>
-        <p>Check stray colors for the selected frame.</p>
-        <button className="button" id="check-colors" onClick={onColorCheck}>
-          Check Colors
-        </button>
-      </div> */}
       <div className="section">
         <h4>Light & Dark Themes</h4>
         <p>Convert frame to opposite theme.</p>

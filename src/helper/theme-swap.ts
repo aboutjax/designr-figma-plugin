@@ -2,141 +2,179 @@ import { DarkUiColors, LightUiColors } from "../theme-styles/colors";
 import { DarkUiEffects, LightUiEffects } from "../theme-styles/effects";
 
 // Fill
-const swapFill = async (node) => {
-  let nodeFillStyleId = node.fillStyleId;
-  let nodeFillPaintStyle = figma.getStyleById(nodeFillStyleId);
-  let nodeFillPaintName = nodeFillPaintStyle.name;
-  let swappedNodeFillName = null;
-  let nodeFillPaintIsLightMode = nodeFillPaintName.includes("light ui");
+const swapFill = async (node, allLightTokens, allDarkTokens) => {
+  let hasFillStyle = node.fillStyleId && node.fillStyleId.length > 0;
 
-  if (nodeFillPaintIsLightMode) {
-    swappedNodeFillName = nodeFillPaintName.replace(
-      "light ui/",
-      "dark ui/"
-    );
+  if (hasFillStyle) {
+    let nodeFillStyleId = node.fillStyleId;
+    let nodeFillPaintStyle = figma.getStyleById(nodeFillStyleId);
+    let nodeFillPaintName = nodeFillPaintStyle.name;
+    let swappedNodeFillName;
+    let nodeFillPaintIsLightMode = nodeFillPaintName.includes("light ui");
 
-    for (const item of DarkUiColors) {
-      if (item.name === swappedNodeFillName) {
-        figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
-          node.fillStyleId = resp.id;
-        });
-      }
+    if (nodeFillPaintIsLightMode) {
+      swappedNodeFillName = nodeFillPaintName.replace("light ui/", "dark ui/");
+
+      let filtered = allDarkTokens.find(
+        (item) => item.name === swappedNodeFillName
+      );
+
+      node.fillStyleId = filtered.id;
+    } else {
+      swappedNodeFillName = nodeFillPaintName.replace("dark ui/", "light ui/");
+
+      let filtered = allLightTokens.find(
+        (item) => item.name === swappedNodeFillName
+      );
+
+      node.fillStyleId = filtered.id;
     }
   } else {
-    swappedNodeFillName = nodeFillPaintName.replace(
-      "dark ui/",
-      "light ui/"
-    );
-
-    for (const item of LightUiColors) {
-      if (item.name === swappedNodeFillName) {
-        figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
-          node.fillStyleId = resp.id;
-        });
-      }
-    }
+    return;
   }
 };
 
 // Strokes
-const swapStroke = async (node) => {
-  let nodeStrokeStyleId = node.strokeStyleId;
-  let nodeStrokePaintStyle = figma.getStyleById(nodeStrokeStyleId);
-  let nodeStrokePaintName = nodeStrokePaintStyle.name;
-  let swappedNodeStrokeName = null;
-  let nodeStrokePaintIsLightMode = nodeStrokePaintName.includes("light ui");
+const swapStroke = async (node, allLightTokens, allDarkTokens) => {
+  let hasStrokeStyle = node.strokeStyleId && node.strokeStyleId.length > 0;
 
-  console.log("Stroke: " + nodeStrokePaintName);
+  if (hasStrokeStyle) {
+    let nodeStrokeStyleId = node.strokeStyleId;
+    let nodeStrokePaintStyle = figma.getStyleById(nodeStrokeStyleId);
+    let nodeStrokePaintName = nodeStrokePaintStyle.name;
+    let swappedNodeStrokeName;
+    let nodeStrokePaintIsLightMode = nodeStrokePaintName.includes("light ui");
 
-  if (nodeStrokePaintIsLightMode) {
-    swappedNodeStrokeName = nodeStrokePaintName.replace(
-      "light ui/",
-      "dark ui/"
-    );
-    for (const item of DarkUiColors) {
-      if (item.name === swappedNodeStrokeName) {
-        figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
-          node.strokeStyleId = resp.id;
-        });
-      } else {
-        // Do nothing
-      }
+    if (nodeStrokePaintIsLightMode) {
+      swappedNodeStrokeName = nodeStrokePaintName.replace(
+        "light ui/",
+        "dark ui/"
+      );
+
+      let filtered = allDarkTokens.find(
+        (item) => item.name === swappedNodeStrokeName
+      );
+
+      node.strokeStyleId = filtered.id;
+    } else {
+      swappedNodeStrokeName = nodeStrokePaintName.replace(
+        "dark ui/",
+        "light ui/"
+      );
+
+      let filtered = allLightTokens.find(
+        (item) => item.name === swappedNodeStrokeName
+      );
+
+      node.strokeStyleId = filtered.id;
     }
   } else {
-    swappedNodeStrokeName = nodeStrokePaintName.replace(
-      "dark ui/",
-      "light ui/"
-    );
-    for (const item of LightUiColors) {
-      if (item.name === swappedNodeStrokeName) {
-        figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
-          node.strokeStyleId = resp.id;
-        });
-      } else {
-        // Do nothing
-      }
-    }
+    return;
   }
 };
 
 // Effects
-const swapEffects = async (node) => {
-  let nodeEffectStyleId = node.effectStyleId;
-  let nodeEffectStyle = figma.getStyleById(nodeEffectStyleId);
-  let nodeEffectStyleName = nodeEffectStyle.name;
-  let swappedNodeEffectName = null;
-  let nodeEffectStyleNameIsLight = nodeEffectStyleName.includes("light ui");
-  console.log("Effect: " + nodeEffectStyleName);
+const swapEffects = async (node, allLightEffects, allDarkEffects) => {
+  let hasEffects = node.effectStyleId && node.effectStyleId.length > 0;
 
-  if (nodeEffectStyleNameIsLight) {
-    swappedNodeEffectName = nodeEffectStyleName.replace(
-      "light ui/",
-      "dark ui/"
-    );
-    for (const item of DarkUiEffects) {
-      if (item.name === swappedNodeEffectName) {
-        figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
-          node.effectStyleId = resp.id;
-        });
-      } else {
-        // do nothing
-      }
+  if (hasEffects) {
+    let nodeEffectStyleId = node.effectStyleId;
+    let nodeEffectStyle = figma.getStyleById(nodeEffectStyleId);
+    let nodeEffectStyleName = nodeEffectStyle.name;
+    let swappedNodeEffectName;
+    let nodeEffectStyleNameIsLight = nodeEffectStyleName.includes("light ui");
+
+    console.log(swappedNodeEffectName);
+
+    if (nodeEffectStyleNameIsLight) {
+      swappedNodeEffectName = nodeEffectStyleName.replace(
+        "light ui/",
+        "dark ui/"
+      );
+
+      let filtered = allDarkEffects.find(
+        (item) => item.name === swappedNodeEffectName
+      );
+
+      console.log(filtered);
+
+      node.effectStyleId = filtered.id;
+    } else {
+      swappedNodeEffectName = nodeEffectStyleName.replace(
+        "dark ui/",
+        "light ui/"
+      );
+
+      let filtered = allLightEffects.find(
+        (item) => item.name === swappedNodeEffectName
+      );
+
+      node.effectStyleId = filtered.id;
     }
   } else {
-    swappedNodeEffectName = nodeEffectStyleName.replace(
-      "dark ui/",
-      "light ui/"
-    );
-    for (const item of LightUiEffects) {
-      if (item.name === swappedNodeEffectName) {
-        figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
-          node.effectStyleId = resp.id;
-        });
-      } else {
-        // Do nothing
-      }
-    }
+    return;
   }
+
+  // if (nodeEffectStyleNameIsLight) {
+  //   swappedNodeEffectName = nodeEffectStyleName.replace(
+  //     "light ui/",
+  //     "dark ui/"
+  //   );
+  //   for (const item of DarkUiEffects) {
+  //     if (item.name === swappedNodeEffectName) {
+  //       figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
+  //         node.effectStyleId = resp.id;
+  //       });
+  //     } else {
+  //       // do nothing
+  //     }
+  //   }
+  // } else {
+  //   swappedNodeEffectName = nodeEffectStyleName.replace(
+  //     "dark ui/",
+  //     "light ui/"
+  //   );
+  //   for (const item of LightUiEffects) {
+  //     if (item.name === swappedNodeEffectName) {
+  //       figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
+  //         node.effectStyleId = resp.id;
+  //       });
+  //     } else {
+  //       // Do nothing
+  //     }
+  //   }
+  // }
 };
 
 // Theme Swap
 const ThemeSwap = async (node) => {
-  GetAllLocalPaintStyles();
-  // GetAllLocalEffectStyles();
-  // do nothing below
-  if ("children" in node) {
-    for (const child of node.children) {
-      if (child.locked) {
-      } else {
-        ThemeSwap(child);
+  // GetAllLocalPaintStyles();
+
+  let allLightTokens = await fetchAllLightTokens();
+  let allDarkTokens = await fetchAllDarkTokens();
+  let allLightEffects = await fetchAllLightEffects();
+  let allDarkEffects = await fetchAllDarkEffects();
+
+  const Swap = (node) => {
+    swapFill(node, allLightTokens, allDarkTokens);
+    swapStroke(node, allLightTokens, allDarkTokens);
+    swapEffects(node, allLightEffects, allDarkEffects);
+    if ("children" in node) {
+      for (const child of node.children) {
+        if (child.locked) {
+        } else {
+          Swap(child);
+        }
       }
+    } else {
+      // do nothing
     }
-  } else {
-    // do nothing
-  }
-  swapFill(node);
-  swapStroke(node);
-  swapEffects(node);
+  };
+
+  Swap(node);
+
+  // swapStroke(node);
+  // swapEffects(node);
 };
 
 export { ThemeSwap };
@@ -185,4 +223,28 @@ const GetAllLocalEffectStyles = () => {
     allEffects.push({ name: effectStyle.name, styleKey: effectStyle.key });
   }
   console.log(allEffects);
+};
+
+const fetchAllLightTokens = async () => {
+  return Promise.all(
+    LightUiColors.map((item) => figma.importStyleByKeyAsync(item.styleKey))
+  );
+};
+
+const fetchAllLightEffects = async () => {
+  return Promise.all(
+    LightUiEffects.map((item) => figma.importStyleByKeyAsync(item.styleKey))
+  );
+};
+
+const fetchAllDarkTokens = async () => {
+  return Promise.all(
+    DarkUiColors.map((item) => figma.importStyleByKeyAsync(item.styleKey))
+  );
+};
+
+const fetchAllDarkEffects = async () => {
+  return Promise.all(
+    DarkUiEffects.map((item) => figma.importStyleByKeyAsync(item.styleKey))
+  );
 };

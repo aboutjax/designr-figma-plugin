@@ -129,6 +129,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
   integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
 
+"@figma/plugin-typings@^1.28.0":
+  version "1.28.0"
+  resolved "https://registry.yarnpkg.com/@figma/plugin-typings/-/plugin-typings-1.28.0.tgz#097cef09b02d44122a7b4405ce181f547f74ac98"
+  integrity sha512-Xypk+7LwbjkHVISRpN02jQbV0OvDMoIsuue/OKn5Hk7Bw3Dyxd3OjXfyzmV90p0CgpLtvEla2BsFqEfy6Xb3OA==
+
 "@types/hoist-non-react-statics@*":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
