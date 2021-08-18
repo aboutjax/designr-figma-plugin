@@ -114,41 +114,11 @@ const swapEffects = async (node, allLightEffects, allDarkEffects) => {
   } else {
     return;
   }
-
-  // if (nodeEffectStyleNameIsLight) {
-  //   swappedNodeEffectName = nodeEffectStyleName.replace(
-  //     "light ui/",
-  //     "dark ui/"
-  //   );
-  //   for (const item of DarkUiEffects) {
-  //     if (item.name === swappedNodeEffectName) {
-  //       figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
-  //         node.effectStyleId = resp.id;
-  //       });
-  //     } else {
-  //       // do nothing
-  //     }
-  //   }
-  // } else {
-  //   swappedNodeEffectName = nodeEffectStyleName.replace(
-  //     "dark ui/",
-  //     "light ui/"
-  //   );
-  //   for (const item of LightUiEffects) {
-  //     if (item.name === swappedNodeEffectName) {
-  //       figma.importStyleByKeyAsync(item.styleKey).then((resp) => {
-  //         node.effectStyleId = resp.id;
-  //       });
-  //     } else {
-  //       // Do nothing
-  //     }
-  //   }
-  // }
 };
 
 // Theme Swap
 const ThemeSwap = async (node) => {
-  // GetAllLocalPaintStyles();
+  GetAllLocalPaintStyles();
 
   let allLightTokens = await fetchAllLightTokens();
   let allDarkTokens = await fetchAllDarkTokens();

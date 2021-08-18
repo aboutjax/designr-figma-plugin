@@ -116,6 +116,10 @@ export const LightUiColors = [
     styleKey: "83be2d1d6f50b396264710e07be1001867e49825",
   },
   {
+    name: "light ui/typography/text.contrastText.navigation",
+    styleKey: "a6f078b789041a26e0f098cae0d640957f1555ee",
+  },
+  {
     name: "light ui/buttons/action.disabledBackground",
     styleKey: "73b15e3a79eeea757283a44cf71131305cba2399",
   },
@@ -255,6 +259,10 @@ export const LightUiColors = [
     name: "light ui/special use/message",
     styleKey: "c85a9b846349a3a7d3eed358acbc32c2715c982d",
   },
+  {
+    name: "light ui/special use/navigation",
+    styleKey: "49cf77f03e90b406a953a6b429dbbbbb0e72d778",
+  },
 ];
 
 export const DarkUiColors = [
@@ -373,6 +381,10 @@ export const DarkUiColors = [
   {
     name: "dark ui/typography/text.contrastText.message",
     styleKey: "d098a757f54437897865872a16ffeb9b99ab95ae",
+  },
+  {
+    name: "dark ui/typography/text.contrastText.navigation",
+    styleKey: "eb93c909ecbfff220ee593d8fb6eacb6a1d817cb",
   },
   {
     name: "dark ui/buttons/action.disabledBackground",
@@ -513,5 +525,9 @@ export const DarkUiColors = [
   {
     name: "dark ui/special use/message",
     styleKey: "9b62610976846cb3933d20dd52ff668454678af7",
+  },
+  {
+    name: "dark ui/special use/navigation",
+    styleKey: "835d0b920b5997c0b97f7390a043e94b6534a506",
   },
 ];
