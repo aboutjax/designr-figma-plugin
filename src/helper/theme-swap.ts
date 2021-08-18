@@ -118,7 +118,7 @@ const swapEffects = async (node, allLightEffects, allDarkEffects) => {
 
 // Theme Swap
 const ThemeSwap = async (node) => {
-  GetAllLocalPaintStyles();
+  // GetAllLocalPaintStyles();
 
   let allLightTokens = await fetchAllLightTokens();
   let allDarkTokens = await fetchAllDarkTokens();
