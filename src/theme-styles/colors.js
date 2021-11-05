@@ -252,6 +252,14 @@ export const LightUiColors = [
     styleKey: "f5c24f44ad40b90bfe1a42faf1943ac1a0ba0ee1",
   },
   {
+    name: "light ui/interaction/special use/navigation.hover",
+    styleKey: "ac57f055a755ea5dee0e80126a4a515591bd934f",
+  },
+  {
+    name: "light ui/interaction/special use/navigation.pressed",
+    styleKey: "a021a40267b62f69428b45f8bc338ddd86875dd2",
+  },
+  {
     name: "light ui/special use/premium",
     styleKey: "78cf4018e5bc9fad67698c9a9a3c65fde8f127f6",
   },
@@ -517,6 +525,14 @@ export const DarkUiColors = [
   {
     name: "dark ui/interaction/special use/premium.pressed",
     styleKey: "5def46e9e443aa9adda425be14ca4aaab1fcd109",
+  },
+  {
+    name: "dark ui/interaction/special use/navigation.hover",
+    styleKey: "852d4f3fd1c1f95af1f218a78e9aa3e8a86c62f2",
+  },
+  {
+    name: "dark ui/interaction/special use/navigation.pressed",
+    styleKey: "20183081538fefd7029008005e45f75059235fa2",
   },
   {
     name: "dark ui/special use/premium",
