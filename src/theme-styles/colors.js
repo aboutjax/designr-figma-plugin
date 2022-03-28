@@ -124,12 +124,12 @@ export const LightUiColors = [
     styleKey: "73b15e3a79eeea757283a44cf71131305cba2399",
   },
   {
-    name: "light ui/background/background.paper",
-    styleKey: "23e94fceed9accbda4db9c672c43d21b4d286e4c",
-  },
-  {
     name: "light ui/background/background.default",
     styleKey: "903e5bf274139eeb9f4968a9ef08ec05eaf0b274",
+  },
+  {
+    name: "light ui/background/background.paper",
+    styleKey: "23e94fceed9accbda4db9c672c43d21b4d286e4c",
   },
   {
     name: "light ui/utility/divider",
@@ -271,16 +271,16 @@ export const LightUiColors = [
     name: "light ui/special use/navigation",
     styleKey: "49cf77f03e90b406a953a6b429dbbbbb0e72d778",
   },
+  {
+    name: "light ui/special use/titleBar",
+    styleKey: "876343714d147d23d41a18ceba7efd14b9753e17",
+  },
 ];
 
 export const DarkUiColors = [
   {
     name: "dark ui/intentions/primary.main",
     styleKey: "2b792d84c9ddb5bb54b4e7ce000c595c79d748ca",
-  },
-  {
-    name: "dark ui/intentions/primary.main.50",
-    styleKey: "b371aab74522b01ab0ba870a9e26c3b7e6e48287",
   },
   {
     name: "dark ui/intentions/primary.dark",
@@ -295,10 +295,6 @@ export const DarkUiColors = [
     styleKey: "767c2a9897062dee0d0f6300406f6e5585f684c7",
   },
   {
-    name: "dark ui/intentions/error.main.50",
-    styleKey: "76d68c9737130b313dfe6d6e18202e56dbfcdf0b",
-  },
-  {
     name: "dark ui/intentions/error.dark",
     styleKey: "34a9a344c25416d1a7ea6d6732db13e7bc6cc397",
   },
@@ -311,10 +307,6 @@ export const DarkUiColors = [
     styleKey: "894fbd335d8b0f6b1cee4ec5ac7a0479397a6b4c",
   },
   {
-    name: "dark ui/intentions/warning.main.50",
-    styleKey: "7e5c98270ac8d6d04d8b613e829e9e707fe42316",
-  },
-  {
     name: "dark ui/intentions/warning.dark",
     styleKey: "44b42a85052841387bc677c5719874cf0207cab5",
   },
@@ -325,10 +317,6 @@ export const DarkUiColors = [
   {
     name: "dark ui/intentions/success.main",
     styleKey: "2d44f3a0c60878cef5dbd10c59a417aa90c0c1bf",
-  },
-  {
-    name: "dark ui/intentions/success.main.50",
-    styleKey: "f814cbc5b3630a5e22c950566ae462723a84dc58",
   },
   {
     name: "dark ui/intentions/success.dark",
@@ -399,12 +387,12 @@ export const DarkUiColors = [
     styleKey: "214ac4df796b51c0f426028d0f4268efa6ee3685",
   },
   {
-    name: "dark ui/background/background.paper",
-    styleKey: "2f060e7422a8ad17a037a250d368cf671adc0468",
-  },
-  {
     name: "dark ui/background/background.default",
     styleKey: "15f5ffac3ec91b24089813439ffadd1f9994b29c",
+  },
+  {
+    name: "dark ui/background/background.paper",
+    styleKey: "2f060e7422a8ad17a037a250d368cf671adc0468",
   },
   {
     name: "dark ui/utility/divider",
@@ -461,10 +449,6 @@ export const DarkUiColors = [
   {
     name: "dark ui/compliance/missed",
     styleKey: "65795aaeadace278c5f8600c30322b927136c023",
-  },
-  {
-    name: "dark ui/compliance/unpaired",
-    styleKey: "2b3b297aef3975cf56b90ecbad30f9551cb8b54c",
   },
   {
     name: "dark ui/compliance/scheduled",
@@ -545,5 +529,13 @@ export const DarkUiColors = [
   {
     name: "dark ui/special use/navigation",
     styleKey: "835d0b920b5997c0b97f7390a043e94b6534a506",
+  },
+  {
+    name: "dark ui/special use/titleBar",
+    styleKey: "62993f294e35f67bcf54b517d5133305624d8b9b",
+  },
+  {
+    name: "utility/mask",
+    styleKey: "d04db26bf897352f5cc49b3854fa6b7e981b18e6",
   },
 ];

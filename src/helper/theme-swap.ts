@@ -179,9 +179,8 @@ const GetAllLocalPaintStyles = () => {
       styleKey: paintStyle.key,
       // rgba: rgba,
     });
-
-    console.log(allStylesArray);
   }
+  console.log(allStylesArray);
 };
 
 // Run this in tokens file
