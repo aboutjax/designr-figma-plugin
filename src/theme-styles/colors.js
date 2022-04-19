@@ -8,11 +8,11 @@ export const LightUiColors = [
     styleKey: "cf0c8e88eb65b8049feca60ac83e1de3d3ab6e8b",
   },
   {
-    name: "light theme/intentions/intentions.primary.main.hover",
+    name: "light theme/intentions/intentions.primary.hover",
     styleKey: "7b735b5edf2b02c5d2f8612aa60860c393b08808",
   },
   {
-    name: "light theme/intentions/intentions.primary.main.pressed",
+    name: "light theme/intentions/intentions.primary.pressed",
     styleKey: "ab198d9c236dabee4f930145c5e59a30faf341be",
   },
   {
@@ -32,11 +32,11 @@ export const LightUiColors = [
     styleKey: "798cb8f898ab2a508a7ba491d899011fda896577",
   },
   {
-    name: "light theme/intentions/intentions.error.main.hover",
+    name: "light theme/intentions/intentions.error.hover",
     styleKey: "a2f495e9c02100bd025146968dfbfd7c9408d8ed",
   },
   {
-    name: "light theme/intentions/intentions.error.main.pressed",
+    name: "light theme/intentions/intentions.error.pressed",
     styleKey: "c9c550806a4ba2a47f303f8f8f31d518d2584f5c",
   },
   {
@@ -56,11 +56,11 @@ export const LightUiColors = [
     styleKey: "f27a60df8c162185ea2472a801b271ef662c0429",
   },
   {
-    name: "light theme/intentions/intentions.warning.main.hover",
+    name: "light theme/intentions/intentions.warning.hover",
     styleKey: "d656dd558bae9c73da336b6fb77e2a67a85d65ee",
   },
   {
-    name: "light theme/intentions/intentions.warning.main.pressed",
+    name: "light theme/intentions/intentions.warning.pressed",
     styleKey: "5644d312af5289595c9fd08b5e52467165e75f12",
   },
   {
@@ -80,11 +80,11 @@ export const LightUiColors = [
     styleKey: "e4aa41e8bf52f94ef5fce3669f510af3cb79c5a7",
   },
   {
-    name: "light theme/intentions/intentions.success.main.hover",
+    name: "light theme/intentions/intentions.success.hover",
     styleKey: "3baacc5cd7744805df243cb1ff3f431c6811f4c8",
   },
   {
-    name: "light theme/intentions/intentions.success.main.pressed",
+    name: "light theme/intentions/intentions.success.pressed",
     styleKey: "462dd55529fb3c5cc63433be192c4cb6ce09018c",
   },
   {
@@ -271,11 +271,11 @@ export const DarkUiColors = [
     styleKey: "2b792d84c9ddb5bb54b4e7ce000c595c79d748ca",
   },
   {
-    name: "dark theme/intentions/intentions.primary.main.hover",
+    name: "dark theme/intentions/intentions.primary.hover",
     styleKey: "99687d1365def72e70d41b03e536f70c1d33d956",
   },
   {
-    name: "dark theme/intentions/intentions.primary.main.pressed",
+    name: "dark theme/intentions/intentions.primary.pressed",
     styleKey: "dab9928da4b1a98b5e435611f01b34bc51fec18a",
   },
   {
@@ -295,11 +295,11 @@ export const DarkUiColors = [
     styleKey: "767c2a9897062dee0d0f6300406f6e5585f684c7",
   },
   {
-    name: "dark theme/intentions/intentions.error.main.hover",
+    name: "dark theme/intentions/intentions.error.hover",
     styleKey: "4bf67774e600f12a09a810dd3dd4133634d1af92",
   },
   {
-    name: "dark theme/intentions/intentions.error.main.pressed",
+    name: "dark theme/intentions/intentions.error.pressed",
     styleKey: "112dda92cd515c320ed92cf23c5bda582e3b19c1",
   },
   {
@@ -319,11 +319,11 @@ export const DarkUiColors = [
     styleKey: "894fbd335d8b0f6b1cee4ec5ac7a0479397a6b4c",
   },
   {
-    name: "dark theme/intentions/intentions.warning.main.hover",
+    name: "dark theme/intentions/intentions.warning.hover",
     styleKey: "d33407d6805f3dbabf34b97878e942e10582fcea",
   },
   {
-    name: "dark theme/intentions/intentions.warning.main.pressed",
+    name: "dark theme/intentions/intentions.warning.pressed",
     styleKey: "8a666ecef0121d5479e8cf107e697d3e76d3fe6d",
   },
   {
@@ -343,11 +343,11 @@ export const DarkUiColors = [
     styleKey: "2d44f3a0c60878cef5dbd10c59a417aa90c0c1bf",
   },
   {
-    name: "dark theme/intentions/intentions.success.main.hover",
+    name: "dark theme/intentions/intentions.success.hover",
     styleKey: "a4f1ba66f12a699f4c68acdbea7fd0a9613a45de",
   },
   {
-    name: "dark theme/intentions/intentions.success.main.pressed",
+    name: "dark theme/intentions/intentions.success.pressed",
     styleKey: "0062d53341773222ffd614eab148e529219579f2",
   },
   {
