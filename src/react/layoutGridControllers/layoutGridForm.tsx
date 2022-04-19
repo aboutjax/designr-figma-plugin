@@ -14,10 +14,8 @@ const LayoutGridForm = (props) => {
     { type: "maxWidthLeftAligned", value: false },
   ]);
 
-  const [
-    selectedFrameLayoutGrids,
-    setselectedFrameLayoutGrids,
-  ] = React.useState(props.selectedLayoutGrids);
+  const [selectedFrameLayoutGrids, setselectedFrameLayoutGrids] =
+    React.useState(props.selectedLayoutGrids);
 
   const [paddingHorizontal, setPaddingHorizontal] = useState(0);
   const [paddingVertical, setPaddingVertical] = useState(0);
@@ -40,7 +38,6 @@ const LayoutGridForm = (props) => {
 
   React.useEffect(() => {
     checkSelectedFrame();
-    console.log("state to paint:", layoutGridState);
   }, [props.selectedLayoutGrids]);
 
   let checkSelectedFrame = async () => {
@@ -232,7 +229,6 @@ const LayoutGridForm = (props) => {
 
       updateLayoutGridStateFromSelectedFrame("maxWidthLeftAligned", true);
     } else {
-      console.log("nope");
       setMaxWidthLeftAligned(false);
       updateLayoutGridStateFromSelectedFrame("maxWidthLeftAligned", false);
     }
@@ -380,12 +376,12 @@ const LayoutGridForm = (props) => {
       />
       <Option
         value={paddingHorizontal}
-        type='horizontal'
+        type="horizontal"
         onChange={handleHorizontalChange}
       />
       <Option
         value={paddingVertical}
-        type='vertical'
+        type="vertical"
         onChange={handleVerticalChange}
       />
       {/* // Deprecated */}
@@ -403,14 +399,14 @@ const LayoutGridForm = (props) => {
 function BasegridCheck(props) {
   return (
     <div>
-      <h4 className='tiny-header'>Baseline Grids</h4>
-      <label htmlFor='baseline-grid' className='layout-grid-label'>
+      <h4 className="tiny-header">Baseline Grids</h4>
+      <label htmlFor="baseline-grid" className="layout-grid-label">
         <span>Show baseline grids</span>
         <input
-          className='layout-grid-input'
-          type='checkbox'
-          id='baseline-grid'
-          name='layout-grid'
+          className="layout-grid-input"
+          type="checkbox"
+          id="baseline-grid"
+          name="layout-grid"
           onChange={props.onChange}
         />
       </label>
@@ -421,14 +417,14 @@ function BasegridCheck(props) {
 function MaxWidthCheck(props) {
   return (
     <div>
-      <h4 className='tiny-header'>Max Width</h4>
-      <label htmlFor='max-width' className='layout-grid-label'>
+      <h4 className="tiny-header">Max Width</h4>
+      <label htmlFor="max-width" className="layout-grid-label">
         <span>Show max width</span>
         <input
-          className='layout-grid-input'
-          type='checkbox'
-          id='max-width'
-          name='layout-grid'
+          className="layout-grid-input"
+          type="checkbox"
+          id="max-width"
+          name="layout-grid"
           onChange={props.onChange}
           checked={props.value}
         />
@@ -440,14 +436,14 @@ function MaxWidthCheck(props) {
 function MaxWidthLeftAlignCheck(props) {
   return (
     <div>
-      <h4 className='tiny-header'>Max Width (Left Aligned)</h4>
-      <label htmlFor='max-width-left-aligned' className='layout-grid-label'>
+      <h4 className="tiny-header">Max Width (Left Aligned)</h4>
+      <label htmlFor="max-width-left-aligned" className="layout-grid-label">
         <span>Show max width (left aligned)</span>
         <input
-          className='layout-grid-input'
-          type='checkbox'
-          id='max-width-left-aligned'
-          name='layout-grid'
+          className="layout-grid-input"
+          type="checkbox"
+          id="max-width-left-aligned"
+          name="layout-grid"
           onChange={props.onChange}
           checked={props.value}
         />
@@ -459,14 +455,14 @@ function MaxWidthLeftAlignCheck(props) {
 function ColumnsCheck(props) {
   return (
     <div>
-      <h4 className='tiny-header'>Columns</h4>
-      <label htmlFor='columns' className='layout-grid-label'>
+      <h4 className="tiny-header">Columns</h4>
+      <label htmlFor="columns" className="layout-grid-label">
         <span>Show columns</span>
         <input
-          className='layout-grid-input'
-          type='checkbox'
-          id='columns'
-          name='layout-grid'
+          className="layout-grid-input"
+          type="checkbox"
+          id="columns"
+          name="layout-grid"
           onChange={props.onChange}
           checked={props.value}
         />
@@ -483,7 +479,7 @@ const ClearAllLink = styled.a`
 
 function ClearLayoutGrid(props) {
   return (
-    <ClearAllLink href='#' onClick={props.onChange}>
+    <ClearAllLink href="#" onClick={props.onChange}>
       Clear All
     </ClearAllLink>
   );

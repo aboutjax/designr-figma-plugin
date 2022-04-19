@@ -5,15 +5,20 @@ import { DarkUiEffects, LightUiEffects } from "../theme-styles/effects";
 const swapFill = async (node, allLightTokens, allDarkTokens) => {
   let hasFillStyle = node.fillStyleId && node.fillStyleId.length > 0;
 
+  // console.log(node, allLightTokens, allDarkTokens);
+
   if (hasFillStyle) {
     let nodeFillStyleId = node.fillStyleId;
     let nodeFillPaintStyle = figma.getStyleById(nodeFillStyleId);
     let nodeFillPaintName = nodeFillPaintStyle.name;
     let swappedNodeFillName;
-    let nodeFillPaintIsLightMode = nodeFillPaintName.includes("light ui");
+    let nodeFillPaintIsLightMode = nodeFillPaintName.includes("light theme");
 
     if (nodeFillPaintIsLightMode) {
-      swappedNodeFillName = nodeFillPaintName.replace("light ui/", "dark ui/");
+      swappedNodeFillName = nodeFillPaintName.replace(
+        "light theme/",
+        "dark theme/"
+      );
 
       let filtered = allDarkTokens.find(
         (item) => item.name === swappedNodeFillName
@@ -21,7 +26,10 @@ const swapFill = async (node, allLightTokens, allDarkTokens) => {
 
       node.fillStyleId = filtered.id;
     } else {
-      swappedNodeFillName = nodeFillPaintName.replace("dark ui/", "light ui/");
+      swappedNodeFillName = nodeFillPaintName.replace(
+        "dark theme/",
+        "light theme/"
+      );
 
       let filtered = allLightTokens.find(
         (item) => item.name === swappedNodeFillName
@@ -43,12 +51,13 @@ const swapStroke = async (node, allLightTokens, allDarkTokens) => {
     let nodeStrokePaintStyle = figma.getStyleById(nodeStrokeStyleId);
     let nodeStrokePaintName = nodeStrokePaintStyle.name;
     let swappedNodeStrokeName;
-    let nodeStrokePaintIsLightMode = nodeStrokePaintName.includes("light ui");
+    let nodeStrokePaintIsLightMode =
+      nodeStrokePaintName.includes("light theme");
 
     if (nodeStrokePaintIsLightMode) {
       swappedNodeStrokeName = nodeStrokePaintName.replace(
-        "light ui/",
-        "dark ui/"
+        "light theme/",
+        "dark theme/"
       );
 
       let filtered = allDarkTokens.find(
@@ -58,8 +67,8 @@ const swapStroke = async (node, allLightTokens, allDarkTokens) => {
       node.strokeStyleId = filtered.id;
     } else {
       swappedNodeStrokeName = nodeStrokePaintName.replace(
-        "dark ui/",
-        "light ui/"
+        "dark theme/",
+        "light theme/"
       );
 
       let filtered = allLightTokens.find(
@@ -82,14 +91,15 @@ const swapEffects = async (node, allLightEffects, allDarkEffects) => {
     let nodeEffectStyle = figma.getStyleById(nodeEffectStyleId);
     let nodeEffectStyleName = nodeEffectStyle.name;
     let swappedNodeEffectName;
-    let nodeEffectStyleNameIsLight = nodeEffectStyleName.includes("light ui");
+    let nodeEffectStyleNameIsLight =
+      nodeEffectStyleName.includes("light theme");
 
     console.log(swappedNodeEffectName);
 
     if (nodeEffectStyleNameIsLight) {
       swappedNodeEffectName = nodeEffectStyleName.replace(
-        "light ui/",
-        "dark ui/"
+        "light theme/",
+        "dark theme/"
       );
 
       let filtered = allDarkEffects.find(
@@ -101,8 +111,8 @@ const swapEffects = async (node, allLightEffects, allDarkEffects) => {
       node.effectStyleId = filtered.id;
     } else {
       swappedNodeEffectName = nodeEffectStyleName.replace(
-        "dark ui/",
-        "light ui/"
+        "dark theme/",
+        "light theme/"
       );
 
       let filtered = allLightEffects.find(
@@ -176,8 +186,8 @@ const GetAllLocalPaintStyles = () => {
 
     allStylesArray.push({
       name: paintStyle.name,
-      styleKey: paintStyle.key,
       // rgba: rgba,
+      styleKey: paintStyle.key,
     });
   }
   console.log(allStylesArray);
